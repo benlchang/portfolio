@@ -1,0 +1,73 @@
+$bento-dim: 800px;
+$sun-dim: 150px;
+$secondary: #220022;
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.bento-box {
+    margin: 7%;
+    width: $bento-dim;
+    height: calc(3/4 * $bento-dim);
+    display: grid;
+    grid-template-columns: repeat(4, calc(1/4 * $bento-dim));
+    grid-template-rows: repeat(3, calc(1/4 * $bento-dim));
+}
+
+.bento-card {
+    border-radius: calc(2/32 * $bento-dim);
+    border-style: solid;
+    margin: 30px;
+    transition: transform 500ms ease-in-out;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: black;
+    background-color: gray;
+    font-size: 45px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.bento-card:hover{
+    transform: scale(1.1);
+}
+
+.one {
+    grid-column: 2 / 4;
+    grid-row: 1;
+}
+
+.two {
+    grid-column: 4;
+    grid-row: 1 / 3;
+}
+
+.three {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.four {
+    grid-column: 1 / 3;
+    grid-row: 3;
+}
+
+.five {
+    grid-column: 3;
+    grid-row: 3;
+}
+
+.nameplate{
+    grid-column: 2 / 4;
+    grid-row: 2;
+}

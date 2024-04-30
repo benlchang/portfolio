@@ -1,6 +1,6 @@
 export default function Exp() {
     return (
-        <div>
+        <div className='page-content'>
             This is the experience page.
         </div>
     )

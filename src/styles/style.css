@@ -1,0 +1,124 @@
+.space {
+  background-color: #f8f8f8;
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.section .name-logo {
+  z-index: 2;
+  color: #131200;
+  font-size: 100px;
+  font-weight: 700;
+  animation: logoRise 1.5s ease-out;
+}
+
+.header {
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  box-shadow: 2px;
+  padding: 23px 0;
+  width: 100vw;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+}
+
+.link {
+  text-decoration: none;
+  color: #131200;
+}
+
+.link:hover {
+  transition: 0.3s ease-in-out;
+  opacity: 0.5;
+}
+
+.blurb {
+  display: grid;
+  grid-template-columns: 2 1fr;
+  grid-template-rows: 1 1fr;
+  margin: 30px;
+  padding: 20px 40px;
+  border-radius: 20px;
+  background-color: #f8f8f8;
+  box-shadow: outset 4px 4px;
+  width: 70%;
+  max-height: 700px;
+  color: black;
+}
+
+.blurb p {
+  max-width: 50%;
+  text-wrap: wrap;
+}
+
+.blurb .left {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.blurb .right {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.emailPage {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-body {
+  width: 200%;
+  height: 10%;
+  text-orientation: initial;
+  text-wrap: wrap;
+}
+
+@keyframes logoRise {
+  from {
+    display: none;
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    display: block;
+    opacity: 1;
+  }
+}
+.card {
+  width: 320px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 3%;
+  background-color: #b8def0;
+  border-radius: 30px;
+  box-shadow: outset 2px;
+}
+
+.card-image {
+  margin: 20px;
+}
+
+.card-text {
+  margin: 20px;
+}/*# sourceMappingURL=style.css.map */

@@ -1,3 +1,23 @@
+@font-face {
+  font-family: "Aliseo";
+  src: url("../fonts/ALISEO-NonCommercial.otf");
+}
+@font-face {
+  font-family: "Pan Neue";
+  src: url("../fonts/PaneuropaNeueRegular.otf");
+}
+@font-face {
+  font-family: "Quark Bold";
+  src: url("../fonts/Quark/Quark-Bold.otf");
+}
+@font-face {
+  font-family: "Quark Light";
+  src: url("../fonts/Quark/Quark-Light.otf");
+}
+* {
+  font-family: "Quark Light";
+}
+
 .space {
   background-color: #f8f8f8;
 }
@@ -8,14 +28,6 @@
   justify-content: center;
   align-items: center;
   position: relative;
-}
-
-.section .name-logo {
-  z-index: 2;
-  color: #131200;
-  font-size: 100px;
-  font-weight: 700;
-  animation: logoRise 1.5s ease-out;
 }
 
 .header {
@@ -43,12 +55,16 @@
 
 .link {
   text-decoration: none;
-  color: #131200;
+  color: #000000;
+  opacity: 0.8;
+  scale: 1;
+  transition: 0.3s ease-in-out;
 }
 
 .link:hover {
   transition: 0.3s ease-in-out;
-  opacity: 0.5;
+  opacity: 1;
+  scale: 1.2;
 }
 
 .blurb {
@@ -110,7 +126,7 @@
   flex-direction: column;
   align-items: center;
   margin: 50px 3%;
-  background-color: #b8def0;
+  background-color: #7765e3;
   border-radius: 30px;
   box-shadow: outset 2px;
 }

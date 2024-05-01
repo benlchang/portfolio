@@ -1,3 +1,23 @@
+@font-face {
+  font-family: "Aliseo";
+  src: url("../fonts/ALISEO-NonCommercial.otf");
+}
+@font-face {
+  font-family: "Pan Neue";
+  src: url("../fonts/PaneuropaNeueRegular.otf");
+}
+@font-face {
+  font-family: "Quark Bold";
+  src: url("../fonts/Quark/Quark-Bold.otf");
+}
+@font-face {
+  font-family: "Quark Light";
+  src: url("../fonts/Quark/Quark-Light.otf");
+}
+* {
+  font-family: "Quark light";
+}
+
 .spaceSection {
   height: 150vh;
   display: flex;
@@ -11,39 +31,65 @@
 
 /*.asteroid.one {
     //identifiers -- how can i pass images through as a property into the scss file?
-}*/
+}
+
 .asteroid {
-  height: 140px;
-  border-radius: 50%;
-  background-color: lightgray;
-  margin: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: rotate(calc(var(--angle) * 1deg));
-  animation: project-wobble 4s ease-in-out infinite;
+    height: $ast-dim;
+    border-radius: 50%;
+    background-color: lightgray;
+    margin: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(calc(var(--angle) * 1deg));
+    animation: project-wobble 4s ease-in-out infinite;
 }
 
 .asteroid.large {
-  width: 420px;
+    width: calc(3 * $ast-dim);
 }
 
 a {
-  color: black;
-  text-decoration: none;
+    color: black;
+    text-decoration: none;
 }
 
 .asteroid-content {
-  font-size: 32px;
-  font-weight: bold;
+    font-size: 32px;
+    font-weight: bold;
+}*/
+.section .name-logo {
+  z-index: 2;
+  color: #000000;
+  font-size: 170px;
+  animation: logoRise 1.5s ease-out;
 }
 
+@media (max-width: 800px) {
+  .section .name-logo {
+    font-size: 170px;
+  }
+}
+@media (max-width: 500px) {
+  .section .name-logo {
+    font-size: 80px;
+  }
+}
 .mini-planet-container {
-  transform: containerOrbit 7s ease-in-out infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .mini-planet {
+  display: block;
   z-index: 1;
+  width: 70px;
+  height: 70px;
+  background-color: #7765e3;
+  border-radius: 50%;
 }
 
 .sun {
@@ -89,30 +135,23 @@ a {
 
 @keyframes containerOrbit {
   0% {
-    transform: translateX(-100px);
+    transform: translateX(-510px) translateY(-50px);
   }
   50% {
-    transform: translateX(100px);
+    transform: translateX(510px) translateY(-50px);
   }
   100% {
-    transform: translateX(-100px);
+    transform: translateX(-510px) translateY(-50px);
+    z-index: 4;
   }
 }
 @keyframes miniOrbit {
-  0% {
-    transform: translateY(0);
-  }
   25% {
-    transform: translateY(-40px);
-  }
-  50% {
-    transform: translateY(0);
+    transform: translateY(-80px);
+    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
   }
   75% {
-    transform: translateY(40px);
-  }
-  100% {
-    transform: translateY(0);
+    transform: translateY(80px);
   }
 }
 @keyframes rot {

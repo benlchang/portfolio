@@ -1,13 +1,60 @@
 import '../styles/astro.scss';
 import Planet from '../components/Planet';
 import ProjectCard from '../components/ProjectCard';
-import Asteroid from '../components/Asteroid';
+import React from 'react';
+import {useState, useEffect} from 'react';
+import {motion, animate, useMotionValue, useAnimation, useTransform, easeInOut} from 'framer-motion';
+import { reverse } from 'dns';
+
+
 
 export default function Home() {
+    const angle = useMotionValue(0);
+    const inputRange = [0, 2 * Math.PI]
+    const a = 600, b = 80;
+
+    useEffect(() => {
+        animate(angle, Math.PI * 2, {
+            duration: 5,
+            repeat: Infinity,
+            ease: 'linear'
+        })
+    })
+
+    const zIndex = angle.get() >= 0 && angle.get() < Math.PI ? 3 : 1;
+
+    const x = useTransform(angle, (ang) => a * Math.cos(angle.get()));
+    const y = useTransform(angle, (ang) => b * Math.sin(angle.get()));
+
+    /*              <motion.div className='mini-planet'
+                    style={{
+                        transform: `translate(${x}, ${y})` ,
+                        zIndex: zindex 
+                    } as React.CSSProperties}>
+                    </motion.div>*/
     return (
         <div className='home-content'>
             <div className='section'>
                 <div className='name-logo'>Ben Chang</div>
+                <motion.div className='mini-planet-container'>
+                    <motion.div  className='mini-planet'
+                       style={{
+                        width: 50,
+                        height: 50,
+                        borderRadius: '50%',
+                        backgroundColor: '#7765e3',
+                        x: x,
+                        y: y,
+                        zIndex: zIndex
+                       }}
+                       transition={{
+                        ease: 'linear',
+                        repeat: Infinity,
+                        repeatType: 'reverse',
+                        duration: 7
+                       }}
+                    />
+                </motion.div>
             </div>
             <div className='section'>
                 <ProjectCard

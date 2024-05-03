@@ -12,11 +12,67 @@ $img-height: 700px;
 }
 
 .section{
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     position: relative;
+    padding: 2vh;
+}
+
+//for the home page/text
+.section .name-logo{
+    z-index: 2;
+    color: $primary;
+    height: 100vh;
+
+    transform: translateY(28vh);
+    font-size: calc(10vw + 7vh);
+    animation: logoRise 1.5s ease-out;
+}
+
+@media (max-width: 800px){
+    .section .name-logo{
+        font-size: 170px;
+        $name-size: 170px;
+    }
+    .elevator{
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 600px){
+    .section .name-logo{
+        font-size: 80px;
+        $name-size: 80px;
+    }
+    .card {
+        width: 280px;
+    }
+}
+
+@media (max-width: 370px){
+    .section .name-logo{
+        font-size: 50px;
+        $name-size: 50px;
+    }
+}
+
+.elevator{
+    grid-row: 1;
+    grid-column: 1;
+    font-size: calc(3.3vw);
+}
+
+.textplusframeworks{
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 2;
+    padding: 40px 6% 40px 0px;
 }
 
 .header {
@@ -37,7 +93,7 @@ $img-height: 700px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 60px;
     font-size: 15px;
     font-family: 'Inter', sans-serif;
 }
@@ -56,35 +112,40 @@ $img-height: 700px;
     scale: 1.2;
 }
 
+a {
+    text-decoration: none;
+    color: $primary;
+}
+
+//for the About page
+
+.titleSection{
+    z-index: 2;
+    text-align: center;
+    width: 100vw;
+    padding: 120px 0 0 0;
+    font-size: 90px;
+}
+
 .blurb{
-    display: grid;
-    grid-template-columns: 2 1fr;
-    grid-template-rows: 1 1fr;
-    margin: 30px;
-    padding: 20px 40px;
-
-    border-radius: 20px;
-    background-color: $background;
-    box-shadow: outset 4px 4px;
-    width: 70%;
-    max-height: $img-height;
-
-    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80vw;
+    padding: 113px 0 0 0;
 }
 
 .blurb p{
+    font-size: min(4.3vh, 2.6vw);
     max-width: 50%;
     text-wrap: wrap;
+    text-align: center;
 }
 
-.blurb .left{
-    grid-column: 1;
-    grid-row: 1;
-}
-
-.blurb .right{
-    grid-column: 2;
-    grid-row : 1;
+.blurb img{
+    height: auto;
+    width: 32vw;
+    border-radius: 40px; //placeholder image ratio is 5:4
 }
 
 .emailPage{
@@ -103,26 +164,55 @@ $img-height: 700px;
     from{
         display: none;
         opacity: 0;
-        transform: translateY(50px);
+        transform: translateY(48vh);
     }
     to{
         display: block;
         opacity: 1;
+        transform: translateY(28vh);
     }
 }
 
+//for the mini about section on the home page
+.sideThing {
+    position: absolute;
+    top: -15%;
+    left: 6%;
+
+    height: 95vh;
+    width: 30vw;
+    background-image: linear-gradient(150deg, $purp 70%, $purp-dark);
+    border-radius: 50px;
+    
+    text-justify: center;
+}
+
+.imgContainer {
+    position: absolute;
+    top: 12%;
+    left: 15%;
+
+    height: auto;
+    width: 110%;
+    border-radius: 40px;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0, 60%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+//for the project cards
 .card {
     width: 320px;
-    height: 400px;
+    height: 500px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 50px 3%;
 
-    background-color: $purp;
+    background-image: linear-gradient(150deg, $purp 70%, $purp-dark);
     border-radius: 30px;
-    box-shadow: outset 2px;
 }
 
 .card-image{

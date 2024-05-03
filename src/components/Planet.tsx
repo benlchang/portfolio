@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/astro.css';
+//import image from `../images/${img}` ???
 
 interface planetProps {
     name: string;

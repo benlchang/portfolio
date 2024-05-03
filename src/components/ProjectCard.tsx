@@ -1,4 +1,5 @@
 import React from 'react';
+import {motion} from 'framer-motion';
 import '../styles/style.css';
 
 interface cardProps {
@@ -9,8 +10,15 @@ interface cardProps {
 
 const ProjectCard: React.FC<cardProps> = ( {name, imgPath, desc} ) => {
     return (
-        <div className='card'>
-            <img src={imgPath}></img>
+        <motion.a className='card' href='./'
+            whileHover={{
+                scale: 1.1,
+                transition: {duration: 0.5}
+            }}
+            whileTap={{
+                scale: 1
+            }}>
+            <img src={imgPath} style={{margin: '5% 0', width: '90%', height: 'auto', borderRadius: 20}}></img>
             <div className='card-text'>
                 <div className='card-title'>
                     {name}
@@ -19,7 +27,7 @@ const ProjectCard: React.FC<cardProps> = ( {name, imgPath, desc} ) => {
                     {desc}
                 </div>
             </div>
-        </div>
+        </motion.a>
     )
 }
 

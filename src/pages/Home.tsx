@@ -1,65 +1,38 @@
 import '../styles/astro.scss';
+import '../styles/style.scss';
+import '../styles/colors-and-fonts.scss';
+import headshot from '../images/headshot.jpg';
 import Planet from '../components/Planet';
+import MiniPlanet from '../components/MiniPlanet';
 import ProjectCard from '../components/ProjectCard';
-import React from 'react';
-import {useState, useEffect} from 'react';
-import {motion, animate, useMotionValue, useAnimation, useTransform, easeInOut} from 'framer-motion';
-import { reverse } from 'dns';
+import {useEffect} from 'react';
+import {motion, animate, useMotionValue, useTransform} from 'framer-motion';
 
 
 
 export default function Home() {
-    const angle = useMotionValue(0);
-    const inputRange = [0, 2 * Math.PI]
-    const a = 600, b = 80;
-
-    useEffect(() => {
-        animate(angle, Math.PI * 2, {
-            duration: 5,
-            repeat: Infinity,
-            ease: 'linear'
-        })
-    })
-
-    const zIndex = angle.get() >= 0 && angle.get() < Math.PI ? 3 : 1;
-
-    const x = useTransform(angle, (ang) => a * Math.cos(angle.get()));
-    const y = useTransform(angle, (ang) => b * Math.sin(angle.get()));
-
-    /*              <motion.div className='mini-planet'
-                    style={{
-                        transform: `translate(${x}, ${y})` ,
-                        zIndex: zindex 
-                    } as React.CSSProperties}>
-                    </motion.div>*/
     return (
         <div className='home-content'>
             <div className='section'>
                 <div className='name-logo'>Ben Chang</div>
-                <motion.div className='mini-planet-container'>
-                    <motion.div  className='mini-planet'
-                       style={{
-                        width: 50,
-                        height: 50,
-                        borderRadius: '50%',
-                        backgroundColor: '#7765e3',
-                        x: x,
-                        y: y,
-                        zIndex: zIndex
-                       }}
-                       transition={{
-                        ease: 'linear',
-                        repeat: Infinity,
-                        repeatType: 'reverse',
-                        duration: 7
-                       }}
-                    />
-                </motion.div>
+                <MiniPlanet size={50} color='#8876f4' height={0.5} orbit={500}/>
+            </div>
+            
+            <div className='section'>
+                <div className='sideThing'>
+                    <img src={headshot} className='imgContainer'/>
+                </div>
+                <div className='textplusframeworks'>
+                    <div className='elevator'>
+                        Ben is a student and undergraduate researcher at the University of Virginia. He's
+                        interested in UI/UX development, software engineering, and astronomy.
+                    </div>
+                </div>
             </div>
             <div className='section'>
                 <ProjectCard
                 name='kyrdle'
-                imgPath='./'
+                imgPath={headshot}
                 desc='Wordle clone using React'/>
                 <ProjectCard
                 name='Project Two'

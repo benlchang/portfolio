@@ -19,7 +19,7 @@
 }
 
 .spaceSection {
-  height: 150vh;
+  height: 180vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,37 +59,10 @@ a {
     font-size: 32px;
     font-weight: bold;
 }*/
-.section .name-logo {
-  z-index: 2;
-  color: #000000;
-  font-size: 170px;
-  animation: logoRise 1.5s ease-out;
-}
-
-@media (max-width: 800px) {
-  .section .name-logo {
-    font-size: 170px;
-  }
-}
-@media (max-width: 500px) {
-  .section .name-logo {
-    font-size: 80px;
-  }
-}
 .mini-planet-container {
   position: absolute;
-  top: 50%;
   left: 50%;
   transform: translateX(-50%);
-}
-
-.mini-planet {
-  display: block;
-  z-index: 1;
-  width: 70px;
-  height: 70px;
-  background-color: #7765e3;
-  border-radius: 50%;
 }
 
 .sun {
@@ -162,17 +135,17 @@ a {
     transform: rotate(360deg);
   }
 }
-@keyframes project-wobble {
-  0% {
-    transform: rotate(calc((var(--angle) - 3) * 1deg));
-  }
-  50% {
-    transform: rotate(calc((var(--angle) + 3) * 1deg));
-  }
-  100% {
-    transform: rotate(calc((var(--angle) - 3) * 1deg));
-  }
-}
+/*@keyframes project-wobble {
+    0% {
+        transform: rotate(calc((var(--angle) - $projwob) * 1deg))
+    }
+    50% {
+        transform: rotate(calc((var(--angle) + $projwob) * 1deg))
+    }
+    100% {
+        transform: rotate(calc((var(--angle) - $projwob) * 1deg))
+    }
+}*/
 @keyframes orbit {
   from {
     transform: translate(calc(-1 * var(--orbit-size) * 160px), 0) rotate(var(--orbital-offSet-i));

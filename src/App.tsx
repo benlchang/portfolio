@@ -10,22 +10,22 @@ import Exp from './pages/Exp';
 import NotFound from './pages/NotFound';
 
 export default function App(){
-  return (
-    <main className = 'whole-thing'>
-      <div className= 'space'>
-        <Router>
-          <Header/>
-          <Routes>
-            <Route path='/' element={<Home/>}/>
-            <Route path='/pages/projects/ProjectOne' element={<ProjectOne/>}/>
-            <Route path='/pages/projects/ProjectTwo' element={<ProjectTwo/>}/>
-            <Route path='/pages/About' element={<About/>}/>
-            <Route path='/pages/Contact' element={<Contact/>}/>
-            <Route path='/pages/Exp' element={<Exp/>}/>
-            <Route element={<NotFound/>}/>
-          </Routes>
-        </Router>
-      </div>
-    </main>
-  );
+    return (
+        <main className = 'whole-thing'>
+            <div className= 'space'>
+                <Router>
+                    <Header/>
+                    <Routes>
+                        <Route path='/' element={<Home/>}/>
+                        <Route path='/pages/projects/ProjectOne' element={<ProjectOne/>}/>
+                        <Route path='/pages/projects/ProjectTwo' element={<ProjectTwo/>}/>
+                        <Route path='/pages/About' element={<About/>}/>
+                        <Route path='/pages/Contact' element={<Contact/>}/>
+                        <Route path='/pages/Exp' element={<Exp/>}/>
+                        <Route element={<NotFound/>}/>
+                    </Routes>
+                </Router>
+            </div>
+        </main>
+    );
 }

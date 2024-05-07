@@ -22,7 +22,7 @@ const MiniPlanet: React.FC<miniProps> = ({size, color, height, orbit}) => {
 
     const x = useTransform(angle, (ang) => a * Math.cos(ang));
     const y = useTransform(angle, (ang) => b * Math.sin(ang));
-    const zIndex = useTransform(angle, (ang) => Math.ceil(Math.cos(ang)) * 2 + 1)
+    const zIndex = useTransform(angle, (ang) => Math.ceil(Math.sin(ang)) * 2 + 1)
     
     const endHeight = height * window.innerHeight;
     return (
@@ -37,7 +37,7 @@ const MiniPlanet: React.FC<miniProps> = ({size, color, height, orbit}) => {
             backgroundColor: color,
             x: x,
             y: y,
-            zIndex: 5
+            zIndex: zIndex
             }}
             transition={{
             ease: 'linear',

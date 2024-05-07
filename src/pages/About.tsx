@@ -6,7 +6,9 @@ import MiniPlanet from '../components/MiniPlanet';
 export default function About() {
     return (
         <>
-            <div className='titleSection'>About Me!</div>
+            <div className='section small'>
+                <div className='aboutLogo'>About Me!</div>
+            </div>
             <MiniPlanet size={40} color='#b8def0' height={0.3} orbit={300}/>
             <div className='section'>
                 <div className='blurb first'>

@@ -23,13 +23,21 @@
 }
 
 .section {
-  min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   position: relative;
+}
+
+.section.large {
+  min-height: 100vh;
   padding: 2vh;
+}
+
+.section.small {
+  min-height: 20vh;
+  padding: 120px 0 0 0;
 }
 
 .section .name-logo {
@@ -120,11 +128,9 @@ a {
   color: #000000;
 }
 
-.titleSection {
+.aboutLogo {
   z-index: 2;
   text-align: center;
-  width: 100vw;
-  padding: 120px 0 0 0;
   font-size: 90px;
 }
 
@@ -145,7 +151,7 @@ a {
 
 .blurb img {
   height: auto;
-  width: 32vw;
+  width: 30vw;
   border-radius: 40px;
 }
 
@@ -179,7 +185,7 @@ a {
   left: 6%;
   height: 95vh;
   width: 30vw;
-  background-image: linear-gradient(150deg, #8876f4 70%, #33219f);
+  background-image: linear-gradient(150deg, #9985ff 40%, #33219f);
   border-radius: 50px;
   text-justify: center;
 }
@@ -199,13 +205,14 @@ a {
 
 .card {
   width: 320px;
-  height: 500px;
+  height: 430px;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 50px 3%;
-  background-image: linear-gradient(150deg, #8876f4 70%, #33219f);
+  background-image: linear-gradient(10deg, #9985ff 40%, #33219f);
   border-radius: 30px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
 }
 
 .card-image {
@@ -213,5 +220,5 @@ a {
 }
 
 .card-text {
-  margin: 20px;
+  margin: 15px;
 }/*# sourceMappingURL=style.css.map */

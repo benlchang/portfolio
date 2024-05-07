@@ -12,14 +12,23 @@ $img-height: 700px;
 }
 
 .section{
-    min-height: 100vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     position: relative;
+}
+
+.section.large {
+    min-height: 100vh;
     padding: 2vh;
 }
+
+.section.small {
+    min-height: 20vh;
+    padding: 120px 0 0 0;
+}
+
 
 //for the home page/text
 .section .name-logo{
@@ -118,12 +127,9 @@ a {
 }
 
 //for the About page
-
-.titleSection{
+.aboutLogo{
     z-index: 2;
     text-align: center;
-    width: 100vw;
-    padding: 120px 0 0 0;
     font-size: 90px;
 }
 

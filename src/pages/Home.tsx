@@ -11,7 +11,7 @@ import ProjectCard from '../components/ProjectCard';
 export default function Home() {
     return (
         <div className='home-content'>
-            <div className='section'>
+            <div className='section large'>
                 <div className='name-logo'>Ben Chang</div>
                 <MiniPlanet size={50} color='#9987ff' height={0.5} orbit={500}/>
             </div>

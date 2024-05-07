@@ -8,6 +8,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Exp from './pages/Exp';
 import NotFound from './pages/NotFound';
+import Footer from './components/Footer';
 
 export default function App(){
     return (
@@ -24,6 +25,7 @@ export default function App(){
                         <Route path='/pages/Exp' element={<Exp/>}/>
                         <Route element={<NotFound/>}/>
                     </Routes>
+                    <Footer/>
                 </Router>
             </div>
         </main>

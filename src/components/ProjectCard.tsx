@@ -18,12 +18,12 @@ const ProjectCard: React.FC<cardProps> = ( {name, imgPath, desc} ) => {
             whileTap={{
                 scale: 1
             }}>
-            <img src={imgPath} style={{margin: '5% 0', width: '90%', height: 'auto', borderRadius: 20}}></img>
-            <div className='card-text'>
-                <div className='card-title'>
+            <img src={imgPath} style={{margin: '7% 0 4% 0', width: '86%', height: '60%', borderRadius: 28}}></img>
+            <div className='card-text' style={{width: '100%'}}>
+                <div className='card-title' style={{textAlign: 'left', margin: '0 7%', fontSize: 30}}>
                     {name}
                 </div>
-                <div className='card-desc'>
+                <div className='card-desc' style={{margin: '0 7%'}}>
                     {desc}
                 </div>
             </div>

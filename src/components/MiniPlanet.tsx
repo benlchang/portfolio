@@ -37,7 +37,7 @@ const MiniPlanet: React.FC<miniProps> = ({size, color, height, orbit}) => {
             backgroundColor: color,
             x: x,
             y: y,
-            zIndex: 1
+            zIndex: 5
             }}
             transition={{
             ease: 'linear',

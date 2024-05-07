@@ -1,5 +1,6 @@
 import '../styles/style.css';
 import image_3 from '../images/image_3.jpg';
+import akatongue from '../images/akatongue.jpg';
 import MiniPlanet from '../components/MiniPlanet';
 
 export default function About() {
@@ -24,7 +25,7 @@ export default function About() {
                         year, and will organize social events and foster a motivated and 
                         excited team dynamic and environment as social chair next year!
                     </p>
-                    <img className= 'right'src={image_3}/>
+                    <img className= 'right'src={akatongue}/>
                 </div>
                 <div className='blurb'>
                     <img className= 'right'src={image_3}/>

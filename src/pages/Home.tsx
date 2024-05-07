@@ -5,8 +5,6 @@ import headshot from '../images/headshot.jpg';
 import Planet from '../components/Planet';
 import MiniPlanet from '../components/MiniPlanet';
 import ProjectCard from '../components/ProjectCard';
-import {useEffect} from 'react';
-import {motion, animate, useMotionValue, useTransform} from 'framer-motion';
 
 
 
@@ -15,7 +13,7 @@ export default function Home() {
         <div className='home-content'>
             <div className='section'>
                 <div className='name-logo'>Ben Chang</div>
-                <MiniPlanet size={50} color='#8876f4' height={0.5} orbit={500}/>
+                <MiniPlanet size={50} color='#9987ff' height={0.5} orbit={500}/>
             </div>
             
             <div className='section'>

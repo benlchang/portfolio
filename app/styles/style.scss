@@ -12,9 +12,10 @@ $img-height: 700px;
 }
 
 .section{
-    width: 98vw;
+    width: 100vw;
     display: flex;
     flex-wrap: wrap;
+    margin: 0;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -22,7 +23,6 @@ $img-height: 700px;
 
 .section.large {
     min-height: 100vh;
-    padding: 2vh;
 }
 
 .section.small {
@@ -33,7 +33,7 @@ $img-height: 700px;
 
 //for the home page/text
 .section .name-logo{
-    z-index: 2;
+    z-index: 0;
     color: $primary;
     height: 100vh;
 
@@ -129,7 +129,7 @@ a {
 
 //for the About page
 .aboutLogo{
-    z-index: 2;
+    z-index: 0;
     text-align: center;
     font-size: 90px;
 }

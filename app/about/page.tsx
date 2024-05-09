@@ -9,8 +9,8 @@ export default function About() {
         <>
             <div className='section small'>
                 <div className='aboutLogo'>About Me!</div>
+                <MiniPlanet size={40} color='#b8def0' height={0.29} orbit={300} />
             </div>
-            <MiniPlanet size={40} color='#b8def0' height={0.3} orbit={300}/>
             <div className='section'>
                 <div className='blurb first'>
                     <Image src={image_3} className='aboutImg' alt='ben again'/>

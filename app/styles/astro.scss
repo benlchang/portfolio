@@ -10,6 +10,7 @@ $name-size: 170px;
     font-family: 'Quark light';
 }
 .spaceSection{
+    width: 100vw;
     height: 180vh;
     display: flex;
     justify-content: center;
@@ -19,6 +20,9 @@ $name-size: 170px;
     
     overflow: hidden;
     background-image: url('../images/star-background.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 

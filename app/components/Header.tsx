@@ -1,6 +1,6 @@
 'use client';
 
-import {Link} from 'react-router-dom';
+import Link from 'next/link';
 import '../styles/style.css';
 
 export function Header() {
@@ -8,9 +8,9 @@ export function Header() {
     return (
         <nav className='header'>
             <div className='header-links'>
-                <Link className='link' to='../'>Home</Link>
-                <Link className='link' to='../pages/About'>About</Link>
-                <Link className='link' to='../pages/Exp'>Extra</Link>
+                <Link className='link' href='./'>Home</Link>
+                <Link className='link' href='./about'>About</Link>
+                <Link className='link' href='./experience'>Extra</Link>
             </div>
         </nav>
     )

@@ -13,7 +13,7 @@ interface cardProps {
 
 const ProjectCard: React.FC<cardProps> = ( {name, imgPath, desc} ) => {
     return (
-        <motion.a className='card' href='./'
+        <motion.a className='projCard' href='./'
             whileHover={{
                 scale: 1.1,
                 transition: {duration: 0.5}

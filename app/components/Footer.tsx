@@ -3,7 +3,7 @@ import '../styles/colors-and-fonts.scss';
 export default function Footer() {
     return (
         <div className='footer' style={{
-            width: '100%', 
+            width: '100vw', 
             background: 'transparent',
             display: 'flex',
             justifyContent: 'center',

@@ -11,10 +11,13 @@ interface miniProps {
 }
 
 const MiniPlanet: React.FC<miniProps> = ({size, color, height, orbit}) => {
-    const endHeight = height * window.innerHeight;
+    let a = 0, b = 0, endHeight = 0
+    if(typeof(window) != undefined){  
+        endHeight = height * window.innerHeight;
+        a = orbit, b = height * window.innerHeight / 4;
+    }
     const angle = useMotionValue(0);
     const zIndex = useMotionValue(-1);
-    const a = orbit, b = height * window.innerHeight / 4;
 
     useEffect(() => {
         animate(angle, Math.PI * 2, {

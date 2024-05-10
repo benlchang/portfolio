@@ -23,6 +23,7 @@ $img-height: 700px;
 
 .section.large {
     min-height: 100vh;
+    padding: 4vh 0 0 0;
 }
 
 .section.small {
@@ -72,7 +73,7 @@ $img-height: 700px;
 .elevator{
     grid-row: 1;
     grid-column: 1;
-    font-size: calc(3.3vw);
+    font-size: calc(4vw);
 }
 
 .textplusframeworks{
@@ -143,7 +144,7 @@ a {
 }
 
 .blurb p{
-    font-size: min(4.3vh, 2.6vw);
+    font-size: min(5.5vh, 3.0vw);
     max-width: 50%;
     text-wrap: wrap;
     text-align: center;

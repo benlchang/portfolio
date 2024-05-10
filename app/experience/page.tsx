@@ -8,7 +8,7 @@ export default function Exp() {
                 <div className='aboutLogo'>Experience</div>
                 <MiniPlanet size={70} color="#756565" height={0.25} orbit={400} />
             </div>
-            <div className='section'>
+            <div className='section small'>
                 <div className='blurb'>
                     Most of my previous experience involves astronomy! I've
                     wanted to figure out the universe since I was a kid, and

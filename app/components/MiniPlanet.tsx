@@ -12,7 +12,7 @@ interface miniProps {
 
 const MiniPlanet: React.FC<miniProps> = ({size, color, height, orbit}) => {
     let a = 0, b = 0, endHeight = 0
-    if(typeof(window) != undefined){  
+    if(typeof window !== undefined){  
         endHeight = height * window.innerHeight;
         a = orbit, b = height * window.innerHeight / 4;
     }

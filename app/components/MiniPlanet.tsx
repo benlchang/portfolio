@@ -1,6 +1,6 @@
 'use client';
 
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useMotionValue, useTransform, animate, motion} from 'framer-motion';
 
 interface miniProps {
@@ -11,15 +11,16 @@ interface miniProps {
 }
 
 const MiniPlanet: React.FC<miniProps> = ({size, color, height, orbit}) => {
-    let a = 0, b = 0, endHeight = 0
-    if(typeof window !== undefined){  
-        endHeight = height * window.innerHeight;
-        a = orbit, b = height * window.innerHeight / 4;
-    }
+    const a = orbit;
+    const [b, setB] = useState(0)
+    const [endHeight, setEH] = useState(0)
+
     const angle = useMotionValue(0);
     const zIndex = useMotionValue(-1);
 
     useEffect(() => {
+        setB(window.innerHeight * height / 4)
+        setEH(window.innerHeight * height)
         animate(angle, Math.PI * 2, {
             duration: 5,
             repeat: Infinity,

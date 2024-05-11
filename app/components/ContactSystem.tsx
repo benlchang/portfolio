@@ -11,7 +11,7 @@ export default function ContactSystem() {
                 route= 'https://github.com/benlchang'
                 img='./images/github.png'
                 axis={1.1}
-                size='50px'
+                size='37px'
                 orbit={1.4}
                 offSet={0}/>
             <Planet
@@ -19,7 +19,7 @@ export default function ContactSystem() {
                 route='https://www.linkedin.com/in/ben-chang-240b8024b/'
                 img='./images/linkedin.webp'
                 axis={1.6}
-                size='65px'
+                size='50px'
                 orbit={3.0}
                 offSet={26}/>
             <Planet
@@ -27,7 +27,7 @@ export default function ContactSystem() {
                 route='https://www.facebook.com/benjamin.chang.9083477'
                 img='./images/facebook.jpg'
                 axis={2.1}
-                size='66px'
+                size='50px'
                 orbit={4.5}
                 offSet={165}/>
             <Planet
@@ -35,7 +35,7 @@ export default function ContactSystem() {
                 route='https://www.instagram.com/benltchang'
                 img='./images/insta.png'
                 axis={2.6}
-                size='58px'
+                size='46px'
                 orbit={9.0}
                 offSet={265}/>
         </div>)

@@ -22,6 +22,8 @@ export default function About() {
                         working on completing my BA in Computer Science focusing on 
                         frontend development and UI/UX design. 
                     </p>
+                    <div className='snakePath left'></div>
+                    <div className='snakePathLtoR'></div>
                 </div>
                 <div className='blurb'>
                     <p className= 'left'>I spend a lot of my free time practicing with my dance crew! 
@@ -32,9 +34,11 @@ export default function About() {
                         me at our most recent performance at Virginia Tech!
                     </p>
                     <Image className= 'aboutImg'src={akatongue} alt='ben dancing'/>
+                    <div className='snakePathRight'></div>
+                    <div className='snakePathRtoL'></div>
                 </div>
                 <div className='blurb'>
-                    <Image className= 'aboutImg'src={sym} alt='ben at barrio culture showcase'/>
+                    <Image className= 'aboutImg two'src={sym} alt='ben at barrio culture showcase'/>
                     <p>Dancing has helped me connect with so many organizations in the UVa
                         community, particularly through culture shows
                         from the <b>Organization of Young Filipino
@@ -42,6 +46,8 @@ export default function About() {
                         for OYFA (on the left!) this past Spring was so exciting and 
                         rewarding!
                     </p>
+                    <div className='snakePath two'></div>
+                    <div className='snakePathLtoR two'></div>
                 </div>
                 <div className='blurb'>
                     <p>After dark, I love stargazing! I've been fascinated by constellations
@@ -49,7 +55,8 @@ export default function About() {
                         was a kid, which is why much of my prior experience relates to 
                         astronomy research. 
                     </p>
-                    <Image className= 'aboutImg'src={image_3} alt='ben stargazing'/>
+                    <Image className= 'aboutImg two'src={image_3} alt='ben stargazing'/>
+                    <div className='snakePathRight two'></div>
                 </div>
             </div>
             <div className='section small' style={{fontSize: 60}}>

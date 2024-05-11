@@ -15,13 +15,17 @@ const Experience: React.FC<expProps> = ({title, desc, img1, img2, img3}) => {
     return (
         <>
             <div className='section small'>
-                <h1 className='projTitle'>{title}</h1>
-                <p className='projDesc'>{desc}</p>
+                <div className='card-title' style={{textAlign: 'left', margin: '0 7%', fontSize: 30}}>
+                    <b><u>{title}</u></b>
+                </div>
+                <div className='card-desc' style={{margin: '0 7%'}}>
+                    {desc}
+                </div>  
             </div>
             <div className='section small'>
-                <Image src={img1} alt='image 1'/>
-                <Image src={img2} alt='image 2'/>
-                <Image src={img3} alt='image 3'/>
+                <Image src={img1} className='expImage' alt='image 1'/>
+                <Image src={img2} className='expImage' alt='image 2'/>
+                <Image src={img3} className='expImage' alt='image 3'/>
             </div>
         </>
     )

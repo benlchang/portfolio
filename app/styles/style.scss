@@ -141,6 +141,8 @@ a {
     align-items: center;
     width: 80vw;
     padding: 113px 0 0 0;
+
+    position: relative;
 }
 
 .blurb p{
@@ -154,6 +156,10 @@ a {
     width: 30vw;
     height: auto;
     border-radius: 40px; //placeholder image ratio is 5:4
+}
+
+.aboutImg.two {
+    width: 35vw;
 }
 
 .emailPage{
@@ -195,6 +201,66 @@ a {
     text-justify: center;
 }
 
+.snakePath {
+    z-index: -3;
+    position: absolute;
+    top: 15%;
+    left: -8%;
+
+    height: 93vh;
+    width: 15vw;
+    background-color: $blue;
+    border-radius: 50px 50px 50px 150px;
+}
+
+.snakePath.two {
+    top: 8%;
+    height: 100vh;
+}
+
+.snakePathRight{
+    z-index: -3;
+    position: absolute;
+    top: -3%;
+    left: 90%;
+    height: 133.5vh;
+    width: 15vw;
+    background-color: $blue;
+    border-radius: 50px 150px 150px 50px;
+}
+
+.snakePathRight.two {
+    top: -6.5%;
+    height: 170vh;
+}
+
+.snakePathLtoR {
+    z-index: -3;
+    position: absolute;
+    top: 96%;
+    left: -3%;
+
+    height: 10vw;
+    width: 81vw;
+    background-color: $blue;
+    border-radius: 50px 50px 50px 150px;
+}
+
+.snakePathLtoR.two {
+    top: 94%;
+}
+
+.snakePathRtoL{
+    z-index: -3;
+    position: absolute;
+    top: 97.1%;
+    left: -8%;
+    height: 10vw;
+    width: 89vw;
+    background-color: $blue;
+    border-radius: 150px 50px 150px 50px;
+}
+
 .imgContainer {
     position: absolute;
     top: 12%;
@@ -221,6 +287,14 @@ a {
 
     background-image: linear-gradient(10deg, $purp 40%, $purp-dark);
     border-radius: 30px;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0, 60%);
+}
+
+.expImage {
+    width: 300px;
+    height: 300px;
+    border-radius: 50px;
+    margin: 50px 3%;
     box-shadow: 5px 5px 5px rgb(0, 0, 0, 60%);
 }
 

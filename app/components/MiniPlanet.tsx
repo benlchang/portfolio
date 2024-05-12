@@ -7,13 +7,17 @@ interface miniProps {
     size: number,
     color: string,
     height: number,
-    orbit: number
+    orbit: number,
+    posX: number,
+    startAng: number,
+    orbitSpeed: number
 }
 
-const MiniPlanet: React.FC<miniProps> = ({size, color, height, orbit}) => {
+const MiniPlanet: React.FC<miniProps> = ({size, color, height, orbit, posX=.5, startAng = 0, orbitSpeed = 1}) => {
     const a = orbit;
     const [b, setB] = useState(0)
     const [endHeight, setEH] = useState(0)
+    const [left, setLeft] = useState(0)
 
     const angle = useMotionValue(0);
     const zIndex = useMotionValue(-1);
@@ -21,19 +25,21 @@ const MiniPlanet: React.FC<miniProps> = ({size, color, height, orbit}) => {
     useEffect(() => {
         setB(window.innerHeight * height / 4)
         setEH(window.innerHeight * height)
+        setLeft(window.innerWidth * posX)
         animate(angle, Math.PI * 2, {
-            duration: 5,
+            duration: 4 * orbitSpeed,
             repeat: Infinity,
             ease: 'linear',
-            onUpdate: latest => zIndex.set(Math.round(Math.sin(latest)))
+            onUpdate: latest => zIndex.set(Math.round(Math.sin(latest + startAng)))
         })
     })
 
-    const x = useTransform(angle, (ang: number) => a * Math.cos(ang));
-    const y = useTransform(angle, (ang: number) => b * Math.sin(ang));
+    const x = useTransform(angle, (ang: number) => a * Math.cos(ang + startAng));
+    const y = useTransform(angle, (ang: number) => b * Math.sin(ang + startAng));
     return (
     <motion.div className='mini-planet-container' style={{
         top: endHeight,
+        left: left,
         width: size,
         zIndex: zIndex,
         position: 'absolute' //seems like, on runtime, this position was set to 'static' 

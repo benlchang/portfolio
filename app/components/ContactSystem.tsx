@@ -1,5 +1,6 @@
 import '../styles/astro.css';
 import Planet from './Planet';
+import React from 'react';
 
 
 export default function ContactSystem() {

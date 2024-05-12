@@ -5,9 +5,11 @@ $img-height: 700px;
 *{
     //font-family: Aliseo;
     font-family: 'Quark Light';
+    scrollbar-width: none;
 }
 
 .space{
+    z-index: 3;
     background-color: $background;
 }
 
@@ -23,7 +25,6 @@ $img-height: 700px;
 
 .section.large {
     min-height: 100vh;
-    padding: 4vh 0 0 0;
 }
 
 .section.small {
@@ -73,39 +74,41 @@ $img-height: 700px;
 .elevator{
     grid-row: 1;
     grid-column: 1;
-    font-size: calc(4vw);
+    font-size: calc(3vw);
 }
 
 .textplusframeworks{
     position: absolute;
     top: -10%;
-    left: 50%;
+    left: 45%;
     display: grid;
     grid-template-columns: 1;
     grid-template-rows: 2;
-    padding: 40px 4% 40px 0px;
+    padding: 40px 7% 40px 0px;
 }
 
 .header {
-    z-index: 3;
+    z-index: 4;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background: transparent;
-    box-shadow: 2px;
-    padding: 23px 0;
-    width: 100vw;
+    padding: 2% 4%;
+    width: 92vw;
     position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
+}
+
+.header-logo{
+    text-align: center;
+    font-size: 60px;
 }
 
 .header-links {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 30px;
     gap: 60px;
-    font-size: 15px;
     font-family: 'Inter', sans-serif;
 }
 
@@ -162,18 +165,6 @@ a {
     width: 35vw;
 }
 
-.emailPage{
-    display: flex;
-    flex-direction: column;
-}
-
-.input-body{
-    width: 200%;
-    height: 10%;
-    text-orientation: initial;
-    text-wrap: wrap;
-}
-
 @keyframes logoRise{
     from{
         display: none;
@@ -191,74 +182,14 @@ a {
 .sideThing {
     position: absolute;
     top: -15%;
-    left: 6%;
+    left: 10%;
 
     height: 95vh;
-    width: 30vw;
+    width: 25vw;
     background-image: linear-gradient(150deg, $purp 40%, $purp-dark);
     border-radius: 50px;
     
     text-justify: center;
-}
-
-.snakePath {
-    z-index: -3;
-    position: absolute;
-    top: 15%;
-    left: -8%;
-
-    height: 93vh;
-    width: 15vw;
-    background-color: $blue;
-    border-radius: 50px 50px 50px 150px;
-}
-
-.snakePath.two {
-    top: 8%;
-    height: 100vh;
-}
-
-.snakePathRight{
-    z-index: -3;
-    position: absolute;
-    top: -3%;
-    left: 90%;
-    height: 133.5vh;
-    width: 15vw;
-    background-color: $blue;
-    border-radius: 50px 150px 150px 50px;
-}
-
-.snakePathRight.two {
-    top: -6.5%;
-    height: 170vh;
-}
-
-.snakePathLtoR {
-    z-index: -3;
-    position: absolute;
-    top: 96%;
-    left: -3%;
-
-    height: 10vw;
-    width: 81vw;
-    background-color: $blue;
-    border-radius: 50px 50px 50px 150px;
-}
-
-.snakePathLtoR.two {
-    top: 94%;
-}
-
-.snakePathRtoL{
-    z-index: -3;
-    position: absolute;
-    top: 97.1%;
-    left: -8%;
-    height: 10vw;
-    width: 89vw;
-    background-color: $blue;
-    border-radius: 150px 50px 150px 50px;
 }
 
 .imgContainer {

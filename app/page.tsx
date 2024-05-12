@@ -1,13 +1,11 @@
-import './styles/astro.scss';
-import './styles/style.scss';
-import './styles/colors-and-fonts.scss';
+import './styles/astro.css';
+import './styles/style.css';
+import './styles/colors-and-fonts.css';
 import headshot from './images/headshot.jpg';
 import image_3 from './images/image_3.jpg';
 import jband from './images/jband.png';
 import Image from 'next/image';
 import projOne from './images/kyrdle.png';
-import Planet from './components/Planet';
-import MiniPlanet from './components/MiniPlanet';
 import LFCard from './components/LFCard';
 import ProjectCard from './components/ProjectCard';
 import ContactSystem from './components/ContactSystem';
@@ -17,11 +15,7 @@ import ContactSystem from './components/ContactSystem';
 export default function Home() {
     return (
         <>
-            <div className='section large'>
-                <div className='name-logo'>Ben Chang</div>
-                <MiniPlanet size={50} color='#9987ff' height={0.5} orbit={500}/>
-            </div>
-            
+            <div className="section small"/>
             <div className='section large'>
                 <div className='sideThing'>
                     <Image src={headshot}
@@ -30,7 +24,7 @@ export default function Home() {
                 </div>
                 <div className='textplusframeworks'>
                     <div className='elevator'>
-                        Ben is a student and undergraduate researcher at the University of Virginia. He's
+                        <span style={{fontWeight: 'bold', fontSize: '84px'}}>Ben</span> is a student and undergraduate researcher at the University of Virginia. He's
                         interested in UI/UX development, software engineering, and astronomy.
                     </div>
                     <LFCard />
@@ -38,20 +32,20 @@ export default function Home() {
             </div>
             <div className='section large'>
                 <ProjectCard
-                name='kyrdle'
-                imgPath={projOne}
-                desc='Wordle clone using React'/>
+                name='Grocery List Assistant'
+                imgPath={image_3}
+                desc='AI model equipped with NLP to help you decide the best store to visit'/>
                 <ProjectCard
                 name='Exoplanet Research'
                 imgPath={jband}
                 desc='Stellar differential imaging and forward modeling with Jupyter and pyklip'/>
                 <ProjectCard
-                name='Project Three'
-                imgPath={image_3}
-                desc='Third project'/>
+                name='Kyrdle'
+                imgPath={projOne}
+                desc='Wordle clone using React'/>
             </div>
             <div className='section small' style={{fontSize: 60}}>
-                Wanna get in touch?
+                Click a planet to learn more about me!
             </div>
             <ContactSystem/>
         </>

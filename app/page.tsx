@@ -6,7 +6,6 @@ import image_3 from './images/image_3.jpg';
 import jband from './images/jband.png';
 import Image from 'next/image';
 import projOne from './images/kyrdle.png';
-import Planet from './components/Planet';
 import MiniPlanet from './components/MiniPlanet';
 import LFCard from './components/LFCard';
 import ProjectCard from './components/ProjectCard';
@@ -38,17 +37,17 @@ export default function Home() {
             </div>
             <div className='section large'>
                 <ProjectCard
-                name='kyrdle'
-                imgPath={projOne}
-                desc='Wordle clone using React'/>
+                name='Grocery List Assistant'
+                imgPath={image_3}
+                desc='AI model equipped with NLP to help you decide the best store to visit'/>
                 <ProjectCard
                 name='Exoplanet Research'
                 imgPath={jband}
                 desc='Stellar differential imaging and forward modeling with Jupyter and pyklip'/>
                 <ProjectCard
-                name='Project Three'
-                imgPath={image_3}
-                desc='Third project'/>
+                name='Kyrdle'
+                imgPath={projOne}
+                desc='Wordle clone using React'/>
             </div>
             <div className='section small' style={{fontSize: 60}}>
                 Wanna get in touch?

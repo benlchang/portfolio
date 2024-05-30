@@ -1,5 +1,6 @@
 import '../styles/style.scss';
 import Image from 'next/image';
+import React from 'react';
 import python from '../images/python.jpg';
 import js from '../images/js.jpg';
 import ts from '../images/ts.png';

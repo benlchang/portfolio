@@ -1,18 +1,18 @@
+import React from 'react';
 import '../styles/style.css';
 import Image from 'next/image';
-import image_3 from '../images/image_3.jpg';
+import image_3 from '../images/image_3.jpg'
 import sym from '../images/2ym.jpg';
 import sitting from '../images/headshot.jpg';
 import akatongue from '../images/akatongue.jpg';
 import MiniPlanet from '../components/MiniPlanet';
-import ContactSystem from '../components/ContactSystem';
 
 export default function About() {
     return (
         <>
             <div className='section small'>
                 <div className='aboutLogo'>About Me!</div>
-                <MiniPlanet size={40} color='#b8def0' height={0.29} orbit={300} />
+                <MiniPlanet size={40} color='#b8def0' height={0.23} orbit={300} posX={.5} startAng = {30} orbitSpeed = {1.2}/>
             </div>
             <div className='section'>
                 <div className='blurb first'>
@@ -22,8 +22,6 @@ export default function About() {
                         working on completing my BA in Computer Science focusing on 
                         frontend development and UI/UX design. 
                     </p>
-                    <div className='snakePath left'></div>
-                    <div className='snakePathLtoR'></div>
                 </div>
                 <div className='blurb'>
                     <p className= 'left'>I spend a lot of my free time practicing with my dance crew! 
@@ -34,8 +32,6 @@ export default function About() {
                         me at our most recent performance at Virginia Tech!
                     </p>
                     <Image className= 'aboutImg'src={akatongue} alt='ben dancing'/>
-                    <div className='snakePathRight'></div>
-                    <div className='snakePathRtoL'></div>
                 </div>
                 <div className='blurb'>
                     <Image className= 'aboutImg two'src={sym} alt='ben at barrio culture showcase'/>
@@ -46,8 +42,6 @@ export default function About() {
                         for OYFA (on the left!) this past Spring was so exciting and 
                         rewarding!
                     </p>
-                    <div className='snakePath two'></div>
-                    <div className='snakePathLtoR two'></div>
                 </div>
                 <div className='blurb'>
                     <p>After dark, I love stargazing! I've been fascinated by constellations
@@ -56,13 +50,8 @@ export default function About() {
                         astronomy research. 
                     </p>
                     <Image className= 'aboutImg two'src={image_3} alt='ben stargazing'/>
-                    <div className='snakePathRight two'></div>
                 </div>
             </div>
-            <div className='section small' style={{fontSize: 60}}>
-                Wanna get in touch?
-            </div>
-            <ContactSystem />
         </>
     )
 }

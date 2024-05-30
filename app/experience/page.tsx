@@ -1,4 +1,5 @@
 import MiniPlanet from '../components/MiniPlanet';
+import React from 'react';
 import '../styles/style.css';
 import Experience from '../components/Experience';
 import astrImg1 from '../images/hband.png';
@@ -10,7 +11,7 @@ export default function Exp() {
         <>
             <div className='section small'>
                 <div className='aboutLogo'>Experience</div>
-                <MiniPlanet size={70} color="#756565" height={0.25} orbit={400} />
+                <MiniPlanet size={70} color="#756565" height={0.19} orbit={400} posX={0.5} startAng={200} orbitSpeed={1.6}/>
             </div>
             <Experience 
                 title= 'University of Virginia: Exoplanet Research via Angular Differential Imaging'

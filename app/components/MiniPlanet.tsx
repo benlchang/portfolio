@@ -23,10 +23,11 @@ const MiniPlanet: React.FC<miniProps> = ({size, color, height, orbit, posX=.5, s
     const zIndex = useMotionValue(-1);
 
     useEffect(() => {
+        let endMotion = Math.PI * 2 + angle.get()
         setB(window.innerHeight * height / 4)
         setEH(window.innerHeight * height)
         setLeft(window.innerWidth * posX)
-        animate(angle, Math.PI * 2, {
+        animate(angle, endMotion, {
             duration: 4 * orbitSpeed,
             repeat: Infinity,
             ease: 'linear',

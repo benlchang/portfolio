@@ -14,8 +14,12 @@
   font-family: "Quark Light";
   src: url("../fonts/Quark/Quark-Light.otf");
 }
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto/RobotoLight-aW3R.ttf");
+}
 * {
-  font-family: "Quark light";
+  font-family: "Roboto";
 }
 
 .spaceSection {

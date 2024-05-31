@@ -14,8 +14,12 @@
   font-family: "Quark Light";
   src: url("../fonts/Quark/Quark-Light.otf");
 }
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto/RobotoLight-aW3R.ttf");
+}
 * {
-  font-family: "Quark Light";
+  font-family: "Roboto";
   scrollbar-width: none;
 }
 
@@ -102,16 +106,15 @@
 
 .header-logo {
   text-align: center;
-  font-size: 60px;
+  font-size: 3.35vw;
 }
 
 .header-links {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 30px;
-  gap: 60px;
-  font-family: "Inter", sans-serif;
+  font-size: 1.675vw;
+  gap: 3.35vw;
 }
 
 .link {

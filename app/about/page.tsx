@@ -12,7 +12,7 @@ export default function About() {
         <>
             <div className='section small'>
                 <div className='aboutLogo'>About Me!</div>
-                <MiniPlanet size={40} color='#b8def0' height={0.23} orbit={300} posX={.5} startAng = {30} orbitSpeed = {1.2}/>
+                <MiniPlanet size={40} color='#b8def0' height={0.23} orbit={.18} posX={.5} startAng = {30} orbitSpeed = {1.2}/>
             </div>
             <div className='section'>
                 <div className='blurb first'>

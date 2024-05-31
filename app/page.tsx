@@ -1,6 +1,7 @@
 import './styles/astro.css';
 import './styles/style.css';
 import './styles/colors-and-fonts.css';
+import React from 'react';
 import headshot from './images/headshot.jpg';
 import image_3 from './images/image_3.jpg';
 import jband from './images/jband.png';

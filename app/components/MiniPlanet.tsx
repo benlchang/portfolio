@@ -14,7 +14,7 @@ interface miniProps {
 }
 
 const MiniPlanet: React.FC<miniProps> = ({size, color, height, orbit, posX=.5, startAng = 0, orbitSpeed = 1}) => {
-    const a = orbit;
+    const [a, setA] = useState(0);
     const [b, setB] = useState(0)
     const [endHeight, setEH] = useState(0)
     const [left, setLeft] = useState(0)
@@ -24,19 +24,23 @@ const MiniPlanet: React.FC<miniProps> = ({size, color, height, orbit, posX=.5, s
 
     useEffect(() => {
         let endMotion = Math.PI * 2 + angle.get()
+        setA(window.innerWidth * orbit)
         setB(window.innerHeight * height / 4)
         setEH(window.innerHeight * height)
         setLeft(window.innerWidth * posX)
+        console.log(window.innerWidth);
         animate(angle, endMotion, {
             duration: 4 * orbitSpeed,
             repeat: Infinity,
             ease: 'linear',
             onUpdate: latest => zIndex.set(Math.round(Math.sin(latest + startAng)))
         })
+        
     })
+    
+    let x = useTransform(angle, (ang: number) => a * Math.cos(ang + startAng))
+    let y = useTransform(angle, (ang: number) => b * Math.sin(ang + startAng));
 
-    const x = useTransform(angle, (ang: number) => a * Math.cos(ang + startAng));
-    const y = useTransform(angle, (ang: number) => b * Math.sin(ang + startAng));
     return (
     <motion.div className='mini-planet-container' style={{
         top: endHeight,

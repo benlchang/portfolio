@@ -25,29 +25,33 @@ export default function Home() {
                 </div>
                 <div className='textplusframeworks'>
                     <div className='elevator'>
-                        <span style={{fontWeight: 'bold', fontSize: '84px'}}>Ben</span> is a student and undergraduate researcher at the University of Virginia. He's
-                        interested in UI/UX development, software engineering, and astronomy.
+                        <span style={{color: '#9985ff', fontWeight: 'bold', fontSize: 'calc(3.5vw)'}}>Ben</span> is a student and undergraduate researcher at the University of Virginia. He's
+                        interested in full-stack development, software engineering, and astronomy.
                     </div>
                     <LFCard />
                 </div>
             </div>
-            <div className='section large'>
+            <div className='section small' style={{fontSize: 60}}>
+                    Projects
+                </div>
+            <div className='projects'>
                 <ProjectCard
-                name='Grocery List Assistant'
+                name='Grocery List Optimizer'
                 imgPath={image_3}
-                desc='AI model equipped with NLP to help you decide the best store to visit'/>
+                desc='Search engine for Charlottesville grocery shoppers'
+                stack='React, Tensorflow, SQLite'
+                link='grocery'
+                />
                 <ProjectCard
                 name='Exoplanet Research'
                 imgPath={jband}
-                desc='Stellar differential imaging and forward modeling with Jupyter and pyklip'/>
-                <ProjectCard
-                name='Kyrdle'
-                imgPath={projOne}
-                desc='Wordle clone using React'/>
+                desc='Stellar differential imaging and forward modeling with Jupyter and pyklip'
+                stack='Jupyter'
+                link='hd47127b'/>
             </div>
-            <div className='section small' style={{fontSize: 60}}>
-                Click a planet to learn more about me!
-            </div>
+            <div className='section small' style={{fontWeight: 700, fontSize: 60}}>
+                    Click a planet to learn more about me!
+                </div>
             <ContactSystem/>
         </>
     )

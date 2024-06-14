@@ -4,33 +4,27 @@ import React from 'react';
 import Image, { StaticImageData } from 'next/image';
 import {motion} from 'framer-motion';
 import '../styles/style.css';
+import Link from 'next/link';
 
 interface cardProps {
     name: string;
     imgPath: StaticImageData;
     desc: string;
+    stack: string;
+    link: string;
 }
 
-const ProjectCard: React.FC<cardProps> = ( {name, imgPath, desc} ) => {
+const ProjectCard: React.FC<cardProps> = ( {name, imgPath, desc, stack, link} ) => {
     return (
-        <motion.a className='projCard' href='./'
-            whileHover={{
-                scale: 1.1,
-                transition: {duration: 0.5}
-            }}
-            whileTap={{
-                scale: 1
-            }}>
-            <Image src={imgPath} style={{margin: '7% 0 4% 0', width: '86%', height: '60%', borderRadius: 28}} alt={name}/>
-            <div className='card-text' style={{width: '100%'}}>
-                <div className='card-title' style={{textAlign: 'left', margin: '0 7%', fontSize: 30}}>
-                    <b><u>{name}</u></b>
-                </div>
-                <div className='card-desc' style={{margin: '0 7%'}}>
-                    {desc}
+            <div className='projcard'>
+                <Image src={imgPath} style={{width: '100%', height: '100%', borderRadius: 28}} alt={name}/>
+                <div className='proj-entry'>
+                    <h3 className='proj-name'>{name}</h3>
+                    <div className='proj-stack'>{stack}</div>
+                    <div className='proj-desc'>{desc}</div>
+                    <Link className='proj-link' href={`./${link}`}>LEARN MORE →</Link>
                 </div>
             </div>
-        </motion.a>
     )
 }
 

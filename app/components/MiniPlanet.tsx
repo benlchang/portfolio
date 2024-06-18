@@ -17,7 +17,6 @@ const MiniPlanet: React.FC<miniProps> = ({size, color, height, orbit, posX=.5, s
     const [a, setA] = useState(0);
     const [b, setB] = useState(0)
     const [endHeight, setEH] = useState(0)
-    const [left, setLeft] = useState(0)
 
     const angle = useMotionValue(0);
     const zIndex = useMotionValue(-1);
@@ -27,7 +26,6 @@ const MiniPlanet: React.FC<miniProps> = ({size, color, height, orbit, posX=.5, s
         setA(window.innerWidth * orbit)
         setB(window.innerHeight * height / 4)
         setEH(window.innerHeight * height)
-        setLeft(window.innerWidth * posX)
         console.log(window.innerWidth);
         animate(angle, endMotion, {
             duration: 4 * orbitSpeed,
@@ -43,8 +41,8 @@ const MiniPlanet: React.FC<miniProps> = ({size, color, height, orbit, posX=.5, s
 
     return (
     <motion.div className='mini-planet-container' style={{
-        top: endHeight,
-        left: left,
+        top: '60%',
+        left: `calc(${posX} * 100vw)`,
         width: size,
         zIndex: zIndex,
         position: 'absolute' //seems like, on runtime, this position was set to 'static' 

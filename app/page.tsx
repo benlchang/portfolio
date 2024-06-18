@@ -31,23 +31,24 @@ export default function Home() {
                     <LFCard />
                 </div>
             </div>
-            <div className='section small' style={{fontSize: 60}}>
-                    Projects
-                </div>
+            <div className='section small' style={{paddingBottom: '5vh', fontWeight: '700', fontSize: 'calc(30px + 3vw)'}}>
+                Projects
+            </div>
             <div className='projects'>
                 <ProjectCard
-                name='Grocery List Optimizer'
-                imgPath={image_3}
-                desc='Search engine for Charlottesville grocery shoppers'
-                stack='React, Tensorflow, SQLite'
-                link='grocery'
+                    name='Grocery List Optimizer'
+                    imgPath={image_3}
+                    desc='Search engine for Charlottesville grocery shoppers'
+                    stack='React, Express, PostgreSQL, Tensorflow'
+                    link='grocery'
                 />
                 <ProjectCard
-                name='Exoplanet Research'
-                imgPath={jband}
-                desc='Stellar differential imaging and forward modeling with Jupyter and pyklip'
-                stack='Jupyter'
-                link='hd47127b'/>
+                    name='Exoplanet Research'
+                    imgPath={jband}
+                    desc='Stellar differential imaging and forward modeling with Jupyter and pyklip'
+                    stack='Jupyter, pyKLIP'
+                    link='hd47127b'
+                />
             </div>
             <div className='section small' style={{fontWeight: 700, fontSize: 60}}>
                     Click a planet to learn more about me!

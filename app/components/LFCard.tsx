@@ -10,6 +10,8 @@ import java from '../images/java.png';
 import sql from '../images/sql.png';
 import react from '../images/react.png';
 import next from '../images/next.png';
+import bash from '../images/bash.png';
+import tf from '../images/tf.png';
 
 const langsandframeworks = [
     {name: 'Python', imgPath: python}, 
@@ -20,7 +22,9 @@ const langsandframeworks = [
     {name: 'Java', imgPath: java},
     {name: 'SQL', imgPath: sql},
     {name: 'React', imgPath: react},
-    {name: 'Next.js', imgPath: next}
+    {name: 'Next.js', imgPath: next},
+    {name: 'bash', imgPath: bash},
+    {name: 'tf', imgPath: tf}
 ]
 
 const LFCard = () => {

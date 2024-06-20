@@ -22,7 +22,7 @@ const ProjectCard: React.FC<cardProps> = ( {name, imgPath, desc, stack, link} ) 
                     <h3 className='proj-name'>{name}</h3>
                     <div className='proj-stack'>{stack}</div>
                     <div className='proj-desc'>{desc}</div>
-                    <Link className='proj-link' href={`./${link}`}>LEARN MORE →</Link>
+                    <Link className='proj-link' href={`./${link}`}>LEARN MORE <span>→</span></Link>
                 </div>
             </div>
     )

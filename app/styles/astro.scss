@@ -13,7 +13,7 @@ $name-size: 170px;
 .spaceSection{
     z-index: 4;
     width: 100vw;
-    height: 180vh;
+    height: 120vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,6 +43,7 @@ $name-size: 170px;
     background-size: cover;
     background-position: center;
     animation: rot 180s linear infinite;
+    box-shadow: 0 0 16px 16px #fcd320;
 }
 
 .planet {
@@ -57,6 +58,8 @@ $name-size: 170px;
     animation: orbit calc(var(--orbital-speed) * $orbital-speed) linear infinite;
     background-position: center;
     background-size: cover;
+
+    box-shadow: inset -4px 0 4px 3px #fff;
 }
 
 .mercury {

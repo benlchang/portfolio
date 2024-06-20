@@ -12,7 +12,7 @@ export default function ContactSystem() {
                 route= 'https://github.com/benlchang'
                 img='./images/github.png'
                 axis={1.1}
-                size='calc(24px + 3vw)'
+                size='calc(16px + 2.4vw)'
                 orbit={1.4}
                 offSet={0}/>
             <Planet

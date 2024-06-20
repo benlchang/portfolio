@@ -50,7 +50,7 @@ export default function Home() {
                     link='hd47127b'
                 />
             </div>
-            <div className='section small' style={{fontWeight: 700, fontSize: 60}}>
+            <div className='section small' style={{fontWeight: 700, fontSize: 'calc(8px + 4vw)'}}>
                     Click a planet to learn more about me!
                 </div>
             <ContactSystem/>

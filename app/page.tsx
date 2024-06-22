@@ -10,6 +10,7 @@ import projOne from './images/kyrdle.png';
 import LFCard from './components/LFCard';
 import ProjectCard from './components/ProjectCard';
 import ContactSystem from './components/ContactSystem';
+import logo from './images/logo_1.png';
 
 
 
@@ -38,7 +39,7 @@ export default function Home() {
                 <ProjectCard
                     name='Grocery List Optimizer'
                     imgPath={image_3}
-                    desc='Search engine for Charlottesville grocery shoppers'
+                    desc='Search engine for Charlottesville grocery shoppers that optimizes your grocery list'
                     stack='React, Express, PostgreSQL, Tensorflow'
                     link='grocery'
                 />
@@ -48,6 +49,13 @@ export default function Home() {
                     desc='Stellar differential imaging and forward modeling with Jupyter and pyklip'
                     stack='Jupyter, pyKLIP'
                     link='hd47127b'
+                />
+                <ProjectCard
+                    name='Personal Website'
+                    imgPath={logo}
+                    desc='Custom-designed portfolio to showcase my programming projects / experience. From scratch!'
+                    stack='React (Typescript), Next.js, SASS'
+                    link='portfolio'
                 />
             </div>
             <div className='section small' style={{fontWeight: 700, fontSize: 'calc(8px + 4vw)'}}>

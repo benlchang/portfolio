@@ -5,6 +5,7 @@ import image_3 from '../images/image_3.jpg'
 import sym from '../images/2ym.jpg';
 import sitting from '../images/headshot.jpg';
 import akatongue from '../images/akatongue.jpg';
+import snrproj from '../images/snrproj.png';
 import MiniPlanet from '../components/MiniPlanet';
 
 export default function About() {
@@ -44,12 +45,14 @@ export default function About() {
                     </p>
                 </div>
                 <div className='blurb'>
-                    <p>After dark, I love stargazing! I've been fascinated by constellations
+                    <p style={{fontSize:'45px'}}>After dark, I love stargazing! I've been fascinated by constellations
                         and astronomical anomalies like black holes and dark matter since I 
                         was a kid, which is why much of my prior experience relates to 
-                        astronomy research. 
+                        astronomy research. The pic to the right is me presenting the project I 
+                        worked on for my senior year of high school -- we tried to estimate the 
+                        chances a given planet could support life!
                     </p>
-                    <Image className= 'aboutImg two'src={image_3} alt='ben stargazing'/>
+                    <Image className= 'aboutImg two'src={snrproj} alt='ben stargazing'/>
                 </div>
             </div>
         </>

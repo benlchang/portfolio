@@ -21,7 +21,7 @@ export default function About() {
                     <p className='right'><b>It's nice to meet you!</b> My name's Ben, 
                         I'm a third-year at the University of Virginia. I'm 
                         working on completing my BA in Computer Science focusing on 
-                        frontend development and UI/UX design. 
+                        full-stack software development. 
                     </p>
                 </div>
                 <div className='blurb'>
@@ -29,10 +29,12 @@ export default function About() {
                         AKAdeMiX <b>designs, choreographs,
                         and performs</b> open-style dance sets for competitions and showcases 
                         at colleges <b>all around the DM/V area</b>. I served as captain this past
-                        year, and will keep my dedication to the team as social chair next year. Here's
-                        me at our most recent performance at Virginia Tech!
+                        year, and will keep my dedication to the team as social chair next year.
                     </p>
-                    <Image className= 'aboutImg'src={akatongue} alt='ben dancing'/>
+                    <div style={{marginLeft: '44px', display: 'flex', flexDirection: 'column', alignItems:'center'}}>
+                        <Image className= 'aboutImg'src={akatongue} alt='ben dancing'/>
+                        <article style={{textAlign: 'center', marginTop: '12px', fontSize: '16px'}}>Center stage at our performance at Momentum Showcase at Virginia Tech!</article>
+                    </div>
                 </div>
                 <div className='blurb'>
                     <Image className= 'aboutImg two'src={sym} alt='ben at barrio culture showcase'/>
@@ -48,11 +50,14 @@ export default function About() {
                     <p style={{fontSize:'45px'}}>Besides software engineering, I love studying astronomy! I've been fascinated by constellations
                         and astronomical anomalies like black holes and dark matter since I 
                         was a kid, which is why much of my prior experience relates to 
-                        astronomy research. The pic to the right is me presenting the project I 
-                        worked on for my senior year of high school -- we tried to estimate the 
-                        chances a given planet could support life!
+                        astronomy research.
                     </p>
-                    <Image className= 'aboutImg two'src={snrproj} alt='ben stargazing'/>
+                    <div style={{marginLeft: '44px', display: 'flex', flexDirection: 'column', alignItems:'center'}}>
+                        <Image className= 'aboutImg two'src={snrproj} alt='ben stargazing'/>
+                        <article style={{fontSize: '16px', textAlign: 'center', marginTop: '12px'}}>Me presenting the project I 
+                        worked on for my senior year of high school -- we tried to estimate the 
+                        chances a given planet could support life!</article>
+                    </div>
                 </div>
             </div>
         </>

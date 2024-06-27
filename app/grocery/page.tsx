@@ -26,7 +26,7 @@ export default function Grocery() {
                 area, or enter a list of items separated by commas to see a completely optimal shopping trip
                 thoroughly planned out and sorted by store!
             </div>
-            <Image src={system_full} alt='Full system design for my grocery list optimizer' style={{width: '60%', height: 'auto', marginTop: '120px', borderRadius: '20px'}}/>
+            <Image src={system_full} alt='Full system design for my grocery list optimizer' className='projectIMG'/>
             <p style={{textAlign: 'center', width: '100%'}}><i>Full system design for the grocery list optimizer project. Backend technologies like web scraping scripts and Kroger API programs not included.</i></p>
             <div className='section small' style={{width: '60vw', textIndent: '100px', textAlign: 'left', fontSize: '32px'}}>
                 I designed and built the user interface with React, a framework I've come to love for its 

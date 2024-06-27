@@ -39,7 +39,7 @@ export default function Home() {
                 <ProjectCard
                     name='Grocery List Optimizer'
                     imgPath={image_3}
-                    desc='Search engine for Charlottesville grocery shoppers that optimizes your grocery list'
+                    desc='Full-stack search engine for Charlottesville grocery shoppers that optimizes your grocery list'
                     stack='React, Express, PostgreSQL, Tensorflow'
                     link='grocery'
                 />

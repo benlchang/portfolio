@@ -155,7 +155,8 @@ a {
   font-size: min(5.5vh, 3vw);
   max-width: 50%;
   text-wrap: wrap;
-  text-align: center;
+  text-align: left;
+  text-indent: 50px;
 }
 
 .aboutImg {

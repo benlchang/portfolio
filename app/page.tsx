@@ -31,7 +31,7 @@ export default function Home() {
                         <span style={{color: '#9985ff', fontWeight: 'bold', fontSize: 'calc(3.5vw)'}}>Ben</span> is a student and undergraduate researcher at the University of Virginia. He's
                         interested in full-stack development, software engineering, and astronomy.
                     </div>
-                    <div style={{paddingTop: '5.25%', width: '80%', display: 'flex', justifyContent: 'center', gap: '15px', alignItems: 'center'}}>
+                    <div style={{paddingTop: '5.25%', maxWidth: '70%', display: 'flex', justifyContent: 'space-around', alignItems: 'center'}}>
                         <Image className='lfCard' src={gmail} alt='gmail logo'/>
                         <Link href='mailto:benlchang32@gmail.com'><u style={{fontSize: 'calc(4px + 2vw)'}}>benlchang@gmail.com</u></Link>
                     </div>

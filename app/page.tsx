@@ -33,7 +33,7 @@ export default function Home() {
                     </div>
                     <div style={{paddingTop: '5.25%', width: '80%', display: 'flex', justifyContent: 'center', gap: '15px', alignItems: 'center'}}>
                         <Image className='lfCard' src={gmail} alt='gmail logo'/>
-                        <Link href='mailto:benlchang32@gmail.com'><u style={{fontSize: 'calc(8px + 1.75vw)'}}>benlchang@gmail.com</u></Link>
+                        <Link href='mailto:benlchang32@gmail.com'><u style={{fontSize: 'calc(4px + 2vw)'}}>benlchang@gmail.com</u></Link>
                     </div>
                     <LFCard />
                 </div>

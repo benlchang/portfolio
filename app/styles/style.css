@@ -317,6 +317,6 @@ h1 {
   width: 60vw;
   text-indent: 100px;
   text-align: left;
-  font-size: min(1.6vw, 5vh);
+  font-size: calc(14px + 0.84vw);
   margin-bottom: 50px;
 }/*# sourceMappingURL=style.css.map */

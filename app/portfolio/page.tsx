@@ -5,16 +5,22 @@ import figma from '../images/figma_2.png'
 
 export default function Portfolio() {
     return (
-        <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
-            <div className='section small'>
-                <div className='aboutLogo'>Personal Website</div>
+        <div className='page-div'>
+            <div className='aboutLogo margined'>Personal Website</div>
+            <div className='section small desc'>
+                <h1>Inspiration</h1>
+                As a software engineer, it's as important to know how to present your products as it is to actually build them. 
+                With this in mind, I wanted to make an interface through which people could view my information, projects, and personality, 
+                while learning how to use state-of-the-art web development tools at the same time.
             </div>
-            <div className='section small' style={{width: '60vw', textIndent: '100px', textAlign: 'left', fontSize: '32px'}}>
-
-            </div>
-            <Image style={{border: 'solid 2px black'}} src={figma} alt='Preliminary design for the website'/>
+            <Image style={{marginTop: '80px', borderRadius: '20px', border: 'solid 2px black'}} src={figma} alt='Preliminary design for the website'/>
             <p style={{textAlign: 'center', width: '100%'}}><i>Preliminary Figma designs for the landing page. Elements from both early versions made it into my finished product!</i></p>
-            <div className='section small' style={{width: '60vw', textIndent: '100px', textAlign: 'left', fontSize: '32px'}}>
+            <div className='section small desc'>
+                <h1>Architecture</h1>
+                I built this portfolio using React with TypeScript, implemented some server-side optimization features with Next.js, 
+                and deployed it using Vercel. React made it easy for me to reuse a bunch of my visual components and manage the state 
+                of some animated planets. Next.js implements lazy image loading automatically, which speeds up my site a bit. That service 
+                also makes deploying my site with Vercel much easier. Feel free to explore this site a bit!
             </div>
         </div>
     )

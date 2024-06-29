@@ -297,7 +297,26 @@ a {
   border-radius: 20px;
 }
 
-.section.small p {
+.section.small p, h1 {
   width: 100%;
   text-align: center;
+}
+
+h1 {
+  text-indent: 0;
+}
+
+.page-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-div .section.small.desc {
+  width: 60vw;
+  text-indent: 100px;
+  text-align: left;
+  font-size: min(1.6vw, 5vh);
+  margin-bottom: 50px;
 }/*# sourceMappingURL=style.css.map */

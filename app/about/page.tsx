@@ -47,7 +47,7 @@ export default function About() {
                     </p>
                 </div>
                 <div className='blurb'>
-                    <p style={{fontSize:'45px'}}>Besides software engineering, I love studying astronomy! I've been fascinated by constellations
+                    <p>Besides software engineering, I love studying astronomy! I've been fascinated by constellations
                         and astronomical anomalies like black holes and dark matter since I 
                         was a kid, which is why much of my prior experience relates to 
                         astronomy research.

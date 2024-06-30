@@ -6,7 +6,7 @@ import headshot from './images/headshot.jpg';
 import image_3 from './images/image_3.jpg';
 import jband from './images/jband.png';
 import Image from 'next/image';
-import projOne from './images/kyrdle.png';
+import grocery from './images/forager.png';
 import LFCard from './components/LFCard';
 import ProjectCard from './components/ProjectCard';
 import ContactSystem from './components/ContactSystem';
@@ -19,7 +19,7 @@ import Link from 'next/link';
 export default function Home() {
     return (
         <>
-            <div className="section small"/>
+            <div className="section small" style={{marginBottom: '55px'}}/>
             <div className='section large'>
                 <div className='sideThing'>
                     <Image src={headshot}
@@ -38,13 +38,20 @@ export default function Home() {
                     <LFCard />
                 </div>
             </div>
-            <div className='section small' style={{paddingBottom: '5vh', fontWeight: '700', fontSize: 'calc(30px + 3vw)'}}>
+            <div className='section small' style={{paddingTop: '0', paddingBottom: '5vh', fontWeight: '700', fontSize: 'calc(30px + 3vw)'}}>
                 Projects
             </div>
             <div className='projects'>
                 <ProjectCard
-                    name='Grocery List Optimizer'
+                    name='Hip Hop Dance Move Identifier'
                     imgPath={image_3}
+                    desc='WORK IN PROGRESS: Trained model that detects and classifies Hip Hop dance moves from video'
+                    stack='OpenCV, MediaPipe, scikit, pandas, AWS'
+                    link='/'
+                />
+                <ProjectCard
+                    name='Grocery List Optimizer'
+                    imgPath={grocery}
                     desc='Full-stack search engine for Charlottesville grocery shoppers that optimizes your grocery list'
                     stack='React, Express, PostgreSQL, Tensorflow'
                     link='grocery'
@@ -64,7 +71,7 @@ export default function Home() {
                     link='portfolio'
                 />
             </div>
-            <div className='section small' style={{fontWeight: 700, fontSize: 'calc(8px + 3.5vw)'}}>
+            <div className='section small' style={{fontWeight: 700, padding: 0, fontSize: 'calc(8px + 3vw)'}}>
                 ↓ Click a planet to learn more about me! ↓
             </div>
             <ContactSystem/>

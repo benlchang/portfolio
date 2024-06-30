@@ -11,10 +11,12 @@ import sql from '../images/sql.png';
 import react from '../images/react.png';
 import next from '../images/next.png';
 import bash from '../images/bash.png';
+import sass from '../images/sass.png';
 import tf from '../images/tf.png';
 import pgsql from '../images/pgsql_noname.png';
 import git from '../images/git.png';
-import node from '../images/node.png';
+import node from '../images/node.webp';
+import opencv from '../images/opencv.png';
 
 const langsandframeworks = [
     {name: 'Python', imgPath: python}, 
@@ -24,13 +26,15 @@ const langsandframeworks = [
     {name: 'CSS', imgPath: css},
     {name: 'Java', imgPath: java},
     {name: 'SQL', imgPath: sql},
+    {name: 'bash', imgPath: bash},
     {name: 'React', imgPath: react},
     {name: 'Next.js', imgPath: next},
-    {name: 'bash', imgPath: bash},
+    {name: 'Sass', imgPath: sass},
     {name: 'TensorFlow', imgPath: tf},
     {name: 'PostgreSQL', imgPath: pgsql},
     {name: 'Git', imgPath: git},
-    {name: 'Node.js', imgPath: node}
+    {name: 'Node.js', imgPath: node},
+    {name: 'OpenCV', imgPath: opencv}
 ]
 
 const LFCard = () => {

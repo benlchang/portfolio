@@ -16,13 +16,13 @@ export default function HD47127b() {
             <p><i>Raw image of HD47127 in the H band -- a coronagraph is used to block most of the light from the star</i></p>
             <div className='section small desc'>
                 
-                <h1>Inspiration</h1>
-                For many objects within astronomy, we don't have enough accurate data points to completely
-                and definitively understand how they work. As a result, the best way we can understand and 
+                <h1>Background</h1>
+                It is difficult to accurately observe objects in space as precisely as we observe things on Earth. As a result, the best way we can understand and 
                 predict certain characteristics about a body in space is by building and fine-tuning 
-                models using the observational data we do have. For example, the Hertzsprung-Russel 
+                models using the limited observational data we have. For example, the Hertzsprung-Russel 
                 diagram maps a star's life cycle by plotting mass and luminosity against one another and 
-                defining a path along which the star ages. 
+                defining a path along which the star ages. Despite our distance, models like these help us understand how
+                objects like stars evolve.
             </div>
             <div className='section small desc'>
                 Benchmark brown dwarf stars are smaller, cooler stars for which at least two significant 

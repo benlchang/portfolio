@@ -14,7 +14,7 @@ export default function ContactSystem() {
                 axis={1.1}
                 size='calc(16px + 2.4vw)'
                 orbit={1.4}
-                offSet={0}/>
+                offSet={70}/>
             <Planet
                 name= 'venus'
                 route='https://www.linkedin.com/in/ben-chang-240b8024b/'
@@ -22,7 +22,7 @@ export default function ContactSystem() {
                 axis={1.6}
                 size='calc(40px + 2vw)'
                 orbit={3.0}
-                offSet={26}/>
+                offSet={96}/>
             <Planet
                 name='earth'
                 route='https://www.facebook.com/benjamin.chang.9083477'
@@ -30,7 +30,7 @@ export default function ContactSystem() {
                 axis={2.1}
                 size='calc(40px + 2vw)'
                 orbit={4.5}
-                offSet={165}/>
+                offSet={5}/>
             <Planet
                 name='mars'
                 route='https://www.instagram.com/benltchang'
@@ -38,6 +38,6 @@ export default function ContactSystem() {
                 axis={2.6}
                 size='calc(36px + 2vw)'
                 orbit={9.0}
-                offSet={265}/>
+                offSet={195}/>
         </div>)
 }

@@ -40,11 +40,12 @@
 
 .section.large {
   min-height: 100vh;
+  padding-bottom: 10vh;
 }
 
 .section.small {
   min-height: 20vh;
-  padding: 120px 0 0 0;
+  padding-top: 10vh;
 }
 
 .section .name-logo {

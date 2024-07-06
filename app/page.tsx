@@ -13,6 +13,9 @@ import ContactSystem from './components/ContactSystem';
 import logo from './images/logo_1.png';
 import gmail from './images/gmail.webp';
 import Link from 'next/link';
+import uva from './images/uva.png';
+import lspace from './images/lspace.png';
+import gmu from './images/gmu.webp';
 
 
 
@@ -39,6 +42,32 @@ export default function Home() {
                 </div>
             </div>
             <div className='section small' style={{paddingTop: '0', paddingBottom: '5vh', fontWeight: '700', fontSize: 'calc(30px + 3vw)'}}>
+                Experience
+            </div>
+            <div className='projects'>
+                <ProjectCard
+                    name='University of Virginia'
+                    imgPath={uva}
+                    desc='Benchmark brown dwarf astrometry and composition analysis with Jupyter Notebook'
+                    stack='Undergraduate Researcher'
+                    link='hd47127b'
+                />
+                <ProjectCard
+                    name="NASA L'SPACE"
+                    imgPath={lspace}
+                    desc='Collaborative NASA project and proposal simulation experience'
+                    stack="Project Developer Intern"
+                    link='/'
+                />
+                <ProjectCard
+                    name='George Mason University'
+                    imgPath={gmu}
+                    desc='Astronomical image reduction pipeline and telescope operation'
+                    stack='Research Intern'
+                    link='/'
+                />
+            </div>
+            <div className='section small' style={{paddingTop: '0', paddingBottom: '5vh', fontWeight: '700', fontSize: 'calc(30px + 3vw)'}}>
                 Projects
             </div>
             <div className='projects'>
@@ -55,13 +84,6 @@ export default function Home() {
                     desc='Full-stack search engine for Charlottesville grocery shoppers that optimizes your grocery list'
                     stack='React, Express, PostgreSQL, Tensorflow'
                     link='grocery'
-                />
-                <ProjectCard
-                    name='Exoplanet Research'
-                    imgPath={jband}
-                    desc='Stellar differential imaging and forward modeling with Jupyter and pyklip'
-                    stack='Jupyter, pyKLIP'
-                    link='hd47127b'
                 />
                 <ProjectCard
                     name='Personal Website'

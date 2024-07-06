@@ -18,7 +18,7 @@ export function Header() {
             <div className='header-links'>
                 <Link className='link' href='./'>Home</Link>
                 <Link className='link' href='./about'>About</Link>
-                <Link className='link' href='./experience'>Extra</Link>
+                {/* <Link className='link' href='./experience'>Extra</Link> */}
             </div>
         </nav>
     )

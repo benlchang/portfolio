@@ -4,7 +4,6 @@ import './styles/colors-and-fonts.css';
 import React from 'react';
 import headshot from './images/ben.jpg';
 import image_3 from './images/image_3.jpg';
-import jband from './images/jband.png';
 import Image from 'next/image';
 import grocery from './images/forager.png';
 import LFCard from './components/LFCard';
@@ -16,6 +15,7 @@ import Link from 'next/link';
 import uva from './images/uva.png';
 import lspace from './images/lspace.png';
 import gmu from './images/gmu.webp';
+import hiphopml from './images/hiphopml.png';
 
 
 
@@ -73,9 +73,9 @@ export default function Home() {
             <div className='projects'>
                 <ProjectCard
                     name='Hip Hop Dance Move Identifier'
-                    imgPath={image_3}
+                    imgPath={hiphopml}
                     desc='WORK IN PROGRESS: Trained model that detects and classifies Hip Hop dance moves from video'
-                    stack='OpenCV, MediaPipe, scikit, pandas, AWS'
+                    stack='OpenCV, MediaPipe, Tensorflow / Keras'
                     link='/'
                 />
                 <ProjectCard

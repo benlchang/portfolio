@@ -16,6 +16,7 @@ import uva from './images/uva.png';
 import lspace from './images/lspace.png';
 import gmu from './images/gmu.webp';
 import hiphopml from './images/hiphopml.png';
+import bookie from './images/bookie.png';
 
 
 
@@ -84,6 +85,13 @@ export default function Home() {
                     desc='Full-stack search engine for Charlottesville grocery shoppers that optimizes your grocery list'
                     stack='React, Express, PostgreSQL, Tensorflow'
                     link='grocery'
+                />
+                <ProjectCard
+                    name='Book Recommendation Bot'
+                    imgPath={bookie}
+                    desc='Agentic AI workflow found a job as your own personal librarian!'
+                    stack='LangGraph, OpenAI, Tavily'
+                    link='/'
                 />
                 <ProjectCard
                     name='Personal Website'

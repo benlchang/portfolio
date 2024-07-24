@@ -51,7 +51,8 @@ export default function Home() {
                     imgPath={uva}
                     desc='Benchmark brown dwarf astrometry and composition analysis with Jupyter Notebook'
                     stack='Undergraduate Researcher'
-                    link='hd47127b'
+                    link='./hd47127b'
+                    github='https://github.com/benlchang/HD47127-b-ADI'
                 />
                 <ProjectCard
                     name="NASA L'SPACE"
@@ -59,6 +60,7 @@ export default function Home() {
                     desc='Collaborative NASA project and proposal simulation experience'
                     stack="Project Developer Intern"
                     link='/'
+                    github='/'
                 />
                 <ProjectCard
                     name='George Mason University'
@@ -66,6 +68,7 @@ export default function Home() {
                     desc='Astronomical image reduction pipeline and telescope operation'
                     stack='Research Intern'
                     link='/'
+                    github='/'
                 />
             </div>
             <div className='section small' style={{paddingTop: '0', paddingBottom: '5vh', fontWeight: '700', fontSize: 'calc(30px + 3vw)'}}>
@@ -78,13 +81,15 @@ export default function Home() {
                     desc='WORK IN PROGRESS: Trained model that detects and classifies Hip Hop dance moves from video'
                     stack='OpenCV, MediaPipe, Tensorflow / Keras'
                     link='/'
+                    github='https://github.com/benlchang/hiphopml'
                 />
                 <ProjectCard
                     name='Grocery List Optimizer'
                     imgPath={grocery}
                     desc='Full-stack search engine for Charlottesville grocery shoppers that optimizes your grocery list'
                     stack='React, Express, PostgreSQL, Tensorflow'
-                    link='grocery'
+                    link='./grocery'
+                    github='https://github.com/benlchang/grocery_cville'
                 />
                 <ProjectCard
                     name='Book Recommendation Bot'
@@ -92,13 +97,15 @@ export default function Home() {
                     desc='Agentic AI workflow found a job as your own personal librarian!'
                     stack='LangGraph, OpenAI, Tavily'
                     link='/'
+                    github='https://github.com/benlchang/bookie'
                 />
                 <ProjectCard
                     name='Personal Website'
                     imgPath={logo}
                     desc='Custom-designed portfolio to showcase my programming projects / experience. From scratch!'
                     stack='React (Typescript), Next.js, SASS'
-                    link='portfolio'
+                    link='./portfolio'
+                    github='https://github.com/benlchang/portfolio'
                 />
             </div>
             <div className='section small' style={{fontWeight: 700, padding: 0, fontSize: 'calc(8px + 3vw)'}}>

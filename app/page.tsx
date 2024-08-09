@@ -17,6 +17,7 @@ import lspace from './images/lspace.png';
 import gmu from './images/gmu.webp';
 import hiphopml from './images/hiphopml.png';
 import bookie from './images/bookie.png';
+import exchange from './images/exchange.png';
 
 
 
@@ -47,10 +48,18 @@ export default function Home() {
             </div>
             <div className='projects'>
                 <ProjectCard
+                    name='Exchange IT Solutions'
+                    imgPath={exchange}
+                    desc=''
+                    stack='Backend Software Developer Intern . . . . Aug 2024 - Pres'
+                    link='/'
+                    github='/'
+                />
+                <ProjectCard
                     name='University of Virginia'
                     imgPath={uva}
                     desc='Benchmark brown dwarf astrometry and composition analysis with Jupyter Notebook'
-                    stack='Undergraduate Researcher'
+                    stack="Undergraduate Researcher . . . . . . . . . . .  . Dec 2023 - Pres"
                     link='./hd47127b'
                     github='https://github.com/benlchang/HD47127-b-ADI'
                 />
@@ -58,7 +67,7 @@ export default function Home() {
                     name="NASA L'SPACE"
                     imgPath={lspace}
                     desc='Collaborative NASA project and proposal simulation experience'
-                    stack="Project Developer Intern"
+                    stack="Project Developer Intern . . . . . . . . . . Sep 2022 - Apr 2023"
                     link='/'
                     github='/'
                 />
@@ -66,7 +75,7 @@ export default function Home() {
                     name='George Mason University'
                     imgPath={gmu}
                     desc='Astronomical image reduction pipeline and telescope operation'
-                    stack='Research Intern'
+                    stack='Research Intern . . . . . . . . . . . . . . . . . May 2021 - Jul 2021'
                     link='/'
                     github='/'
                 />

@@ -17,6 +17,8 @@ import pgsql from '../images/pgsql_noname.png';
 import git from '../images/git.png';
 import node from '../images/node.webp';
 import opencv from '../images/opencv.png';
+import django from '../images/django.png';
+import deeplearningai from '../images/deeplearningai.png'
 
 const langsandframeworks = [
     {name: 'Python', imgPath: python}, 
@@ -25,16 +27,19 @@ const langsandframeworks = [
     {name: 'HTML', imgPath: html},
     {name: 'CSS', imgPath: css},
     {name: 'Java', imgPath: java},
-    {name: 'SQL', imgPath: sql},
-    {name: 'bash', imgPath: bash},
-    {name: 'React', imgPath: react},
-    {name: 'Next.js', imgPath: next},
-    {name: 'Sass', imgPath: sass},
+    // {name: 'SQL', imgPath: sql},
+    // {name: 'bash', imgPath: bash},
     {name: 'TensorFlow', imgPath: tf},
+    {name: 'OpenCV', imgPath: opencv},
+    {name: 'LangGraph', imgPath: deeplearningai},
+    {name: 'Django', imgPath: django},
     {name: 'PostgreSQL', imgPath: pgsql},
     {name: 'Git', imgPath: git},
+    {name: 'React', imgPath: react},
+    {name: 'Next.js', imgPath: next},
     {name: 'Node.js', imgPath: node},
-    {name: 'OpenCV', imgPath: opencv}
+    {name: 'Sass', imgPath: sass}
+
 ]
 
 const LFCard = () => {

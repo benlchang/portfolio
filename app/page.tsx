@@ -101,9 +101,9 @@ export default function Home() {
                     github='https://github.com/benlchang/grocery_cville'
                 />
                 <ProjectCard
-                    name='Book Recommendation Bot'
+                    name='Book Recommendation AI'
                     imgPath={bookie}
-                    desc='Agentic AI workflow found a job as your own personal librarian!'
+                    desc='Agentic AI workflow curates book recommendations and summaries based on your favorites'
                     stack='LangGraph, OpenAI, Tavily'
                     link='/'
                     github='https://github.com/benlchang/bookie'

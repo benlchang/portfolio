@@ -61,7 +61,7 @@ export default function Home() {
                     desc='Benchmark brown dwarf astrometry and composition analysis with Jupyter Notebook'
                     stack="Undergraduate Researcher . . . . . . . . . . .  . Dec 2023 - Pres"
                     link='./hd47127b'
-                    github='https://github.com/benlchang/HD47127-b-ADI'
+                    github='/'
                 />
                 <ProjectCard
                     name="NASA L'SPACE"

@@ -3,9 +3,10 @@
 import React, {useState} from 'react';
 import Image, {StaticImageData} from 'next/image';
 import '../styles/style.scss';
-import {ScrollMenu} from 'react-horizontal-scrolling-menu';
+import {ItemId, ScrollMenu} from 'react-horizontal-scrolling-menu';
 import exchange from '../images/exchange.png';
 import 'react-horizontal-scrolling-menu/dist/styles.css';
+import { publicApiType } from 'react-horizontal-scrolling-menu';
 
 interface cardProps {
     name: string;
@@ -72,11 +73,8 @@ export default function Timeline() {
 
     const [activeExperiences, setActiveExperiences] = useState([experiences[0]])
 
-    const handleDateScroll = (publicAPI: any) => {
-        
-        // let visibleIds = publicAPI.items.filter((item) => publicAPI.visibleItems.includes(item));
-        let visibleIds = [""];
-        console.log(publicAPI.visibleItems);
+    const handleDateScroll = (publicAPI: publicApiType) => {
+        let visibleIds = publicAPI.items.getVisible().map(item => item[0]);
         const currentExperiences = experiences.filter((event) => dateContains(event, visibleIds));
         setActiveExperiences(currentExperiences);
     }

@@ -1,5 +1,6 @@
 @import 'colors-and-fonts.scss';
 $img-height: 700px;
+$exp-height: 300px;
 
 
 *{
@@ -29,8 +30,7 @@ $img-height: 700px;
 }
 
 .section.small {
-    min-height: 20vh;
-    padding-top: 10vh;
+    height: $exp-height + 100px;
 }
 
 .section.small.scroll {
@@ -47,6 +47,7 @@ $img-height: 700px;
     scroll-behavior: smooth;
     outline: 4px solid;
     height: 10vh;
+    padding-top: 0;
 }
 
 
@@ -362,4 +363,21 @@ h1{
     text-align: left;
     font-size: calc(14px + .84vw);
     margin-bottom: 50px;
+}
+
+.expcard {
+    width: $exp-height;
+    height: $exp-height;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+
+    background-color: $purp;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    border-radius: 30px;
 }

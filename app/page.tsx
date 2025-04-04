@@ -19,13 +19,14 @@ import gmu from './images/gmu.webp';
 import hiphopml from './images/hiphopml.png';
 import bookie from './images/bookie.png';
 import exchange from './images/exchange.png';
+import cs3240 from './images/cs3240.png';
 
 
 
 export default function Home() {
     return (
         <>
-            <div className="section small" style={{marginBottom: '55px'}}/>
+            <div className="section small" style={{height: '12vh', marginBottom: '30px'}}/>
             <div className='section large'>
                 <div className='sideThing'>
                     <Image src={headshot}
@@ -44,7 +45,7 @@ export default function Home() {
                     <LFCard />
                 </div>
             </div>
-            <div className='section small' style={{paddingTop: '0', paddingBottom: '5vh', fontWeight: '700', fontSize: 'calc(30px + 3vw)'}}>
+            <div className='section small' style={{height: '0vh', paddingTop: '0', paddingBottom: '0', fontWeight: '700', fontSize: 'calc(30px + 3vw)'}}>
                 Experience
             </div>
             <Timeline />
@@ -93,6 +94,14 @@ export default function Home() {
                     stack='OpenCV, MediaPipe, Tensorflow / Keras'
                     link='/'
                     github='https://github.com/benlchang/hiphopml'
+                />
+                <ProjectCard
+                    name='Cataloging/Lending App'
+                    imgPath={cs3240}
+                    desc='Class project allows users to borrow and organize vinyl albums'
+                    stack='Django, Amazon S3, GitHub CI, Heroku'
+                    link='/'
+                    github='/'
                 />
                 <ProjectCard
                     name='Grocery List Optimizer'

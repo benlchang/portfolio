@@ -7,16 +7,7 @@ import {ItemId, ScrollMenu} from 'react-horizontal-scrolling-menu';
 import exchange from '../images/exchange.png';
 import 'react-horizontal-scrolling-menu/dist/styles.css';
 import { publicApiType } from 'react-horizontal-scrolling-menu';
-
-interface cardProps {
-    name: string;
-    position: string;
-    imgPath: StaticImageData;
-    desc: string;
-    time: string;
-    stack: string;
-    link: string;
-}
+import ExperienceCard from './ExperienceCard';
 
 let now = new Date();
 let curMonth = now.getMonth();
@@ -26,11 +17,11 @@ let startMonth = 0;
 let startYear = 2021;
 
 const experiences = [
-    {name: 'GMU ASSIP', start: new Date(2021, 5), end: new Date(2021, 7)},
-    {name: 'NASA LSPACE', start: new Date(2022, 9), end: new Date(2023, 5)},
-    {name: 'Exchange IT Solutions', start: new Date(2024, 8), end: new Date(2024, 10)},
-    {name: 'University of Virginia Department of Astronomy', start: new Date(2023, 12), end: now},
-    {name: 'University of Virginia Department of Computer Science', start: new Date(2025, 1), end: now},
+    {job_title: 'Astronomy Research Intern', company: "GMU ASSIP", stack: 'Powershell', link: '/', imgPath: '/', start: new Date(2021, 5), end: new Date(2021, 7)},
+    {job_title: 'Project Development Intern', company: "NASA L'SPACE", stack: '', link: '/', imgPath: '/', start: new Date(2022, 9), end: new Date(2023, 5)},
+    {job_title: 'Software Developer Intern', company: "Exchange IT", stack: 'Django, PostgreSQL', link: '/', imgPath: '/', start: new Date(2024, 8), end: new Date(2024, 10)},
+    {job_title: 'Undergraduate Researcher', company: "UVA Astronomy", stack: 'Jupyter, Powershell, pyKLIP & species', link: '/', imgPath: '/', start: new Date(2023, 12), end: now},
+    {job_title: 'Teaching Assistant - Computer Architecture', company: "UVA Computer Science", stack: 'C', link: '/', imgPath: '/', start: new Date(2025, 1), end: now},
     // {
     //     name: 'Exchange IT Solutions',
     //     position: 'Backend Software Developer Intern',
@@ -74,8 +65,14 @@ export default function Timeline() {
 
     const [activeExperiences, setActiveExperiences] = useState([experiences[0]])
 
+
     const handleDateScroll = (publicAPI: publicApiType) => {
-        let visibleIds = publicAPI.items.getVisible().map(item => item[0]);
+        let visibleIds = publicAPI.items.filter(item => {   // issues here
+            let rect = item[1].entry.boundingClientRect;
+            console.log(rect.left, rect.right);
+            return rect.left >= 150 && rect.right <= 1400;
+        }).map(item => item[0]);
+        console.log(visibleIds);
         const currentExperiences = experiences.filter((event) => dateContains(event, visibleIds));
         setActiveExperiences(currentExperiences);
     }
@@ -84,9 +81,15 @@ export default function Timeline() {
         <div>
             <div className='section small'>
                 {activeExperiences.map((experience) => (
-                    <div>
-                        {experience.name}
-                    </div>
+                    <ExperienceCard 
+                        job_title={experience.job_title}
+                        company={experience.company}
+                        stack={experience.stack}
+                        link={experience.link}
+                        imgPath={experience.imgPath}
+                        start={experience.start}
+                        end={experience.end}
+                    />
                 ))}
             </div>
             <div className='section small scroll'> 

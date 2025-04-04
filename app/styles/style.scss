@@ -46,6 +46,7 @@ $img-height: 700px;
     justify-content: flex-start;
     scroll-behavior: smooth;
     outline: 4px solid;
+    height: 10vh;
 }
 
 
@@ -91,7 +92,11 @@ $img-height: 700px;
 .elevator{
     grid-row: 1;
     grid-column: 1;
-    font-size: calc(3vw);
+    font-size: calc(2.7vw);
+
+    opacity: 0;
+    animation: fadeIn ease 1.5s forwards;
+    animation-delay: 0.5s;
 }
 
 .textplusframeworks{
@@ -211,17 +216,24 @@ a {
 
 .imgContainer {
     position: absolute;
-    top: 12%;
-    left: 15%;
+    top: 10%;
+    left: 20%;
 
     height: auto;
-    width: 110%;
+    width: 98%;
     border-radius: 40px;
     box-shadow: 5px 5px 5px rgb(0, 0, 0, 60%);
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    animation: fadeIn ease 1s;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
 }
 
 //for the project cards
@@ -292,6 +304,10 @@ a {
     align-items: center;
     flex-wrap: wrap;
     padding: 8vh 0 0 0;
+
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+    animation-delay: 1s;
 }
 
 .lfCard {

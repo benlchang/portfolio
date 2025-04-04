@@ -50,21 +50,22 @@ const dateContains = (event: {start: Date, end: Date}, nums: string[]) => {
         let num = parseInt(nums[i]);
         const curDate = new Date(startYear + num / 12, startMonth + num % 12);
         
-        // console.log('Ran for', event, curDate);
         if(curDate >= event.start && curDate <= event.end) {
             return true;
         }
     }
 
-    // console.log('Ran outer code', nums);
-
     return false;
 }
 
+let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
 function Card({itemId}: {itemId: number}) {
+
+    let date = new Date(startYear + itemId / 12, startMonth + itemId % 12);
     return (
         <div style={{width: '160px'}}>
-            {itemId}
+            {months[date.getMonth()]} {date.getFullYear()}
         </div>
     )
 }

@@ -34,10 +34,10 @@ export default function Home() {
                 </div>
                 <div className='textplusframeworks'>
                     <div className='elevator'>
-                        <span style={{color: '#9985ff', fontWeight: 'bold', fontSize: 'calc(3.5vw)'}}>Ben</span> is a student and undergraduate researcher at the University of Virginia. He's
-                        interested in full-stack development, software engineering, and astronomy.
+                        <span style={{color: '#9985ff', fontWeight: 'bold', fontSize: 'calc(3.0vw)'}}>Ben</span> is a student and undergraduate researcher at the University of Virginia. He's
+                        interested in software engineering, machine learning, image analysis, and astronomy.
                     </div>
-                    <div style={{paddingTop: '5.25%', maxWidth: '70%', display: 'flex', justifyContent: 'space-around', alignItems: 'center'}}>
+                    <div style={{animation: 'fadeIn 1.5s ease forwards', animationDelay: '1s', opacity: '0', paddingTop: '5.25%', maxWidth: '70%', display: 'flex', justifyContent: 'space-around', alignItems: 'center'}}>
                         <Image className='lfCard' src={gmail} alt='gmail logo'/>
                         <Link href='mailto:benlchang32@gmail.com'><u style={{fontSize: 'calc(4px + 2vw)'}}>benlchang@gmail.com</u></Link>
                     </div>

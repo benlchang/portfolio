@@ -33,6 +33,21 @@ $img-height: 700px;
     padding-top: 10vh;
 }
 
+.section.small.scroll {
+    padding-left: 50%;
+    padding-right: 50%;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+    // width: 100%;
+    width: 0%;  // necessary for the padding on either side of the scrollbar
+    direction: rtl;
+    justify-content: flex-start;
+    scroll-behavior: smooth;
+    outline: 4px solid;
+}
+
 
 //for the home page/text
 .section .name-logo{

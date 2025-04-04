@@ -9,6 +9,7 @@ import grocery from './images/forager.png';
 import LFCard from './components/LFCard';
 import ProjectCard from './components/ProjectCard';
 import ContactSystem from './components/ContactSystem';
+import Timeline from './components/Timeline';
 import logo from './images/logo_1.png';
 import gmail from './images/gmail.webp';
 import Link from 'next/link';
@@ -46,7 +47,8 @@ export default function Home() {
             <div className='section small' style={{paddingTop: '0', paddingBottom: '5vh', fontWeight: '700', fontSize: 'calc(30px + 3vw)'}}>
                 Experience
             </div>
-            <div className='projects'>
+            <Timeline />
+            {/* <div className='projects'>
                 <ProjectCard
                     name='Exchange IT Solutions'
                     imgPath={exchange}
@@ -79,7 +81,7 @@ export default function Home() {
                     link='/'
                     github='/'
                 />
-            </div>
+            </div> */}
             <div className='section small' style={{paddingTop: '0', paddingBottom: '5vh', fontWeight: '700', fontSize: 'calc(30px + 3vw)'}}>
                 Projects
             </div>

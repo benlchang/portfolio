@@ -3,7 +3,6 @@ import './styles/style.css';
 import './styles/colors-and-fonts.css';
 import React from 'react';
 import headshot from './images/ben.jpg';
-import image_3 from './images/image_3.jpg';
 import Image from 'next/image';
 import grocery from './images/forager.png';
 import LFCard from './components/LFCard';
@@ -13,12 +12,8 @@ import Timeline from './components/Timeline';
 import logo from './images/logo_1.png';
 import gmail from './images/gmail.webp';
 import Link from 'next/link';
-import uva from './images/uva.png';
-import lspace from './images/lspace.png';
-import gmu from './images/gmu.webp';
 import hiphopml from './images/hiphopml.png';
 import bookie from './images/bookie.png';
-import exchange from './images/exchange.png';
 import cs3240 from './images/cs3240.png';
 
 

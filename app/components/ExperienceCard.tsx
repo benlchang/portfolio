@@ -9,7 +9,7 @@ import Link from 'next/link';
 interface cardProps {
     job_title: string;
     company: string;
-    stack: string,
+    stack: Array<StaticImageData>,
     link: string;
     imgPath: StaticImageData;
     start: Date;
@@ -22,12 +22,16 @@ const ExperienceCard: React.FC<cardProps> = ( {job_title, company, stack, link, 
     return (
         <div className='expcard'>
             <motion.div style={{width: '85%'}} whileHover={{scale: 1.1}}>
-                <Image src={imgPath} style={{margin: 0, width: '100%', height: '200px', borderRadius: 28}} alt={company}/>
+                <Image src={imgPath} style={{margin: 0, width: '100%', height: '225px', borderRadius: 28}} alt={company}/>
             </motion.div>
             <h3 className='proj-name'>{job_title}</h3>
             <div>{company}</div>
-            <div>{stack}</div>
-            <div style={{width: '100%', display: 'flex', justifyContent: 'space-between'}}>
+            <span>
+                {stack.map(item => {
+                    return <Image className='lfCard small' src={item} alt=''/>
+                })}
+            </span>
+            <div style={{width: '90%', display: 'flex', justifyContent: 'space-between'}}>
                 <span>{months[start.getMonth()]} {start.getFullYear()} </span>
                 <span>{months[end.getMonth()]} {end.getFullYear()} </span>
 

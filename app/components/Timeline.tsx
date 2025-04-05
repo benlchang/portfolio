@@ -12,6 +12,11 @@ import lspace from '../images/lspace.png';
 import gmu from '../images/gmu.webp';
 import uvacs from '../images/uvacs.png';
 import uvaastro from '../images/uvaastro.png';
+import powershell from '../images/image_3.jpg';
+import django from '../images/django.svg';
+import postgres from '../images/pgsql_noname.png';
+import jupyter from '../images/jupyter.png';
+import c from '../images/image_3.jpg';
 
 let now = new Date();
 let startMonth = 0;
@@ -21,11 +26,11 @@ let width = window.innerWidth / 2;
 console.log(width);
 
 const experiences = [
-    {job_title: 'Astronomy Research Intern', company: "GMU ASSIP", stack: 'Powershell', link: '/', imgPath: gmu, start: new Date(2021, 5), end: new Date(2021, 7)},
-    {job_title: 'Project Development Intern', company: "NASA L'SPACE", stack: '', link: '/', imgPath: lspace, start: new Date(2022, 9), end: new Date(2023, 5)},
-    {job_title: 'Software Developer Intern', company: "Exchange IT", stack: 'Django, PostgreSQL', link: '/', imgPath: exchange, start: new Date(2024, 8), end: new Date(2024, 10)},
-    {job_title: 'Undergraduate Researcher', company: "UVA Astronomy", stack: 'Jupyter, Powershell, pyKLIP & species', link: '/', imgPath: uvaastro, start: new Date(2023, 12), end: now},
-    {job_title: 'Teaching Assistant - Computer Architecture', company: "UVA Computer Science", stack: 'C', link: '/', imgPath: uvacs, start: new Date(2025, 1), end: now},
+    {job_title: 'Astronomy Research Intern', company: "GMU ASSIP", stack: [powershell], link: '/', imgPath: gmu, start: new Date(2021, 5-1), end: new Date(2021, 7-1)},
+    {job_title: 'Project Development Fellow', company: "NASA L'SPACE", stack: [], link: '/', imgPath: lspace, start: new Date(2022, 9-1), end: new Date(2023, 5-1)},
+    {job_title: 'Software Developer Intern', company: "Exchange IT", stack: [django, postgres], link: '/', imgPath: exchange, start: new Date(2024, 8-1), end: new Date(2024, 10-1)},
+    {job_title: 'Undergraduate Researcher', company: "UVA Astronomy", stack: [jupyter, powershell], link: '/', imgPath: uvaastro, start: new Date(2023, 12-1), end: now},
+    {job_title: 'Teaching Assistant', company: "UVA Computer Systems & Organization II", stack: [c], link: '/', imgPath: uvacs, start: new Date(2025, 1-1), end: now},
     // {
     //     name: 'Exchange IT Solutions',
     //     position: 'Backend Software Developer Intern',
@@ -82,7 +87,7 @@ export default function Timeline() {
         let visibleIds = Array.from(allDates)
             .filter(item => {
                 let rect = item.getBoundingClientRect();
-                return rect.left >= .8 * width && rect.right <= 1.2 * width;
+                return rect.left >= .7 * width && rect.right <= 1.3 * width;
             })
             .map(item => item.id);
 

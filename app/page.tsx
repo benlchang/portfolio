@@ -96,7 +96,7 @@ export default function Home() {
                     github='https://github.com/benlchang/hiphopml'
                 />
                 <ProjectCard
-                    name='Cataloging/Lending App'
+                    name='Cataloguing/Lending App'
                     imgPath={cs3240}
                     desc='Class project allows users to borrow and organize vinyl albums'
                     stack='Django, Amazon S3, GitHub CI, Heroku'

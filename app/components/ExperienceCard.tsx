@@ -11,20 +11,27 @@ interface cardProps {
     company: string;
     stack: string,
     link: string;
-    imgPath: string;
+    imgPath: StaticImageData;
     start: Date;
     end: Date;
 }
 
+let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
 const ExperienceCard: React.FC<cardProps> = ( {job_title, company, stack, link, imgPath, start, end} ) => {
     return (
         <div className='expcard'>
-            {/* <motion.div style={{width: '100%'}} whileHover={{scale: 1.1}}>
-                <Image src={imgPath} style={{margin: 0, width: '100%', height: '280px', borderRadius: 28}} alt={company}/>
-            </motion.div> */}
+            <motion.div style={{width: '85%'}} whileHover={{scale: 1.1}}>
+                <Image src={imgPath} style={{margin: 0, width: '100%', height: '200px', borderRadius: 28}} alt={company}/>
+            </motion.div>
             <h3 className='proj-name'>{job_title}</h3>
             <div>{company}</div>
             <div>{stack}</div>
+            <div style={{width: '100%', display: 'flex', justifyContent: 'space-between'}}>
+                <span>{months[start.getMonth()]} {start.getFullYear()} </span>
+                <span>{months[end.getMonth()]} {end.getFullYear()} </span>
+
+            </div>
             {/* <div style={{display: 'flex', justifyContent: 'space-between'}}>
                 <span>{link !== '/' && <Link className='proj-link' href={link}>About the Project →</Link>}</span> 
                 <span>{github !== '/' && <Link className='proj-link' target='_blank' href={github}>GitHub →</Link>}</span>

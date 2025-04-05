@@ -8,20 +8,24 @@ import exchange from '../images/exchange.png';
 import 'react-horizontal-scrolling-menu/dist/styles.css';
 import { publicApiType } from 'react-horizontal-scrolling-menu';
 import ExperienceCard from './ExperienceCard';
+import lspace from '../images/lspace.png';
+import gmu from '../images/gmu.webp';
+import uvacs from '../images/uvacs.png';
+import uvaastro from '../images/uvaastro.png';
 
 let now = new Date();
-let curMonth = now.getMonth();
-let curYear = now.getFullYear();
-
 let startMonth = 0;
 let startYear = 2021;
 
+let width = window.innerWidth / 2;
+console.log(width);
+
 const experiences = [
-    {job_title: 'Astronomy Research Intern', company: "GMU ASSIP", stack: 'Powershell', link: '/', imgPath: '/', start: new Date(2021, 5), end: new Date(2021, 7)},
-    {job_title: 'Project Development Intern', company: "NASA L'SPACE", stack: '', link: '/', imgPath: '/', start: new Date(2022, 9), end: new Date(2023, 5)},
-    {job_title: 'Software Developer Intern', company: "Exchange IT", stack: 'Django, PostgreSQL', link: '/', imgPath: '/', start: new Date(2024, 8), end: new Date(2024, 10)},
-    {job_title: 'Undergraduate Researcher', company: "UVA Astronomy", stack: 'Jupyter, Powershell, pyKLIP & species', link: '/', imgPath: '/', start: new Date(2023, 12), end: now},
-    {job_title: 'Teaching Assistant - Computer Architecture', company: "UVA Computer Science", stack: 'C', link: '/', imgPath: '/', start: new Date(2025, 1), end: now},
+    {job_title: 'Astronomy Research Intern', company: "GMU ASSIP", stack: 'Powershell', link: '/', imgPath: gmu, start: new Date(2021, 5), end: new Date(2021, 7)},
+    {job_title: 'Project Development Intern', company: "NASA L'SPACE", stack: '', link: '/', imgPath: lspace, start: new Date(2022, 9), end: new Date(2023, 5)},
+    {job_title: 'Software Developer Intern', company: "Exchange IT", stack: 'Django, PostgreSQL', link: '/', imgPath: exchange, start: new Date(2024, 8), end: new Date(2024, 10)},
+    {job_title: 'Undergraduate Researcher', company: "UVA Astronomy", stack: 'Jupyter, Powershell, pyKLIP & species', link: '/', imgPath: uvaastro, start: new Date(2023, 12), end: now},
+    {job_title: 'Teaching Assistant - Computer Architecture', company: "UVA Computer Science", stack: 'C', link: '/', imgPath: uvacs, start: new Date(2025, 1), end: now},
     // {
     //     name: 'Exchange IT Solutions',
     //     position: 'Backend Software Developer Intern',
@@ -33,7 +37,7 @@ const experiences = [
     // }
 ]
 
-const times = Array.from({ length: 53 }, (_, i) => 52 - i);
+const times = Array.from({ length: 52 }, (_, i) => 51 - i);
 
 const dateContains = (event: {start: Date, end: Date}, nums: string[]) => {
 
@@ -54,32 +58,48 @@ let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oc
 function Card({itemId}: {itemId: number}) {
 
     let date = new Date(startYear + itemId / 12, startMonth + itemId % 12);
+    let container = document.getElementById(`${itemId}`);
+    let rect = container?.getBoundingClientRect();
+
+    let ctr = width;
+    if(rect != null){
+        ctr = (rect.left + rect.right) / 2;
+    }
+
     return (
         <div style={{width: '160px'}}>
-            {months[date.getMonth()]} {date.getFullYear()}
+            <span style={{display: 'flex', justifyContent: 'center', textAlign: 'center', fontSize: `calc(28px * (1 - (${1.4/width * Math.abs(ctr - width)}))`}}>{months[date.getMonth()]} {date.getFullYear()}</span>
         </div>
     )
 }
 
 export default function Timeline() {
 
-    const [activeExperiences, setActiveExperiences] = useState([experiences[0]])
+    const [activeExperiences, setActiveExperiences] = useState([experiences[3], experiences[4]])
+    let allDates = document.querySelectorAll<HTMLElement>('[data-item]');
 
+    const handleDateScroll = () => {
+        let visibleIds = Array.from(allDates)
+            .filter(item => {
+                let rect = item.getBoundingClientRect();
+                return rect.left >= .8 * width && rect.right <= 1.2 * width;
+            })
+            .map(item => item.id);
 
-    const handleDateScroll = (publicAPI: publicApiType) => {
-        let visibleIds = publicAPI.items.filter(item => {   // issues here
-            let rect = item[1].entry.boundingClientRect;
-            console.log(rect.left, rect.right);
-            return rect.left >= 150 && rect.right <= 1400;
-        }).map(item => item[0]);
         console.log(visibleIds);
-        const currentExperiences = experiences.filter((event) => dateContains(event, visibleIds));
+        
+        let currentExperiences = experiences.filter((event) => dateContains(event, visibleIds));
+
+        // for some reason, on page load, it scrolls twice and no items are loaded, so the field is empty on the page
+        if(visibleIds.length == 0){
+            currentExperiences = [experiences[3], experiences[4]];
+        }
         setActiveExperiences(currentExperiences);
     }
     
     return (
         <div>
-            <div className='section small'>
+            <div className='section small display'>
                 {activeExperiences.map((experience) => (
                     <ExperienceCard 
                         job_title={experience.job_title}
@@ -93,17 +113,19 @@ export default function Timeline() {
                 ))}
             </div>
             <div className='section small scroll'> 
-                <ScrollMenu 
-                    onUpdate={(publicAPI) => handleDateScroll(publicAPI)}
-                >
-                    {times.map((num) => (
-                        <div key={num}>
-                            <Card 
-                                itemId={num}
-                            />
-                        </div>
-                    ))}
-                </ScrollMenu>
+                <div className='borderdiv'>
+                    <ScrollMenu 
+                        onUpdate={() => handleDateScroll()}
+                    >
+                        {times.map((num) => (
+                            <div data-item={`id_${num}`} id={`${num}`} key={num}>
+                                <Card 
+                                    itemId={num}
+                                />
+                            </div>
+                        ))}
+                    </ScrollMenu>
+                </div>
 
             </div>
         </div>

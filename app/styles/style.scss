@@ -1,6 +1,6 @@
 @import 'colors-and-fonts.scss';
 $img-height: 700px;
-$exp-height: 300px;
+$exp-height: 400px;
 
 
 *{
@@ -29,7 +29,10 @@ $exp-height: 300px;
     padding-bottom: 10vh;
 }
 
-.section.small {
+.section.small.display {
+    margin: 0;
+    padding: 0;
+    
     height: $exp-height + 100px;
 }
 
@@ -45,9 +48,16 @@ $exp-height: 300px;
     direction: rtl;
     justify-content: flex-start;
     scroll-behavior: smooth;
-    outline: 4px solid;
-    height: 10vh;
-    padding-top: 0;
+    border-top: 4px solid;
+    border-left: transparent;
+    border-image: linear-gradient(90deg, white 20%, black 50%, white 80%) 1;
+    height: 2vh;
+    padding-top: 2%;
+}
+
+.section.small.scroll .borderdiv {
+    margin-top: 20%;
+    height: 100%;
 }
 
 
@@ -366,7 +376,7 @@ h1{
 }
 
 .expcard {
-    width: $exp-height;
+    width: $exp-height * 1/1.2;
     height: $exp-height;
     display: flex;
     flex-direction: column;
@@ -374,10 +384,10 @@ h1{
     align-items: center;
     margin: 10px;
 
-    background-color: $purp;
+    // background-image: linear-gradient(150deg, $purp 60%, $purp-dark);
 
-    border-style: solid;
-    border-width: 2px;
-    border-color: white;
+    border-style: solid outset;
+    border-width: 10px;
+    border-color: $purp;
     border-radius: 30px;
 }

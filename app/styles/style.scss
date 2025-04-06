@@ -1,5 +1,6 @@
 @import 'colors-and-fonts.scss';
 $img-height: 700px;
+$exp-height: 450px;
 
 
 *{
@@ -28,9 +29,35 @@ $img-height: 700px;
     padding-bottom: 10vh;
 }
 
-.section.small {
-    min-height: 20vh;
-    padding-top: 10vh;
+.section.small.display {
+    margin: 0;
+    padding: 0;
+    
+    height: $exp-height + 100px;
+}
+
+.section.small.scroll {
+    padding-left: 50%;
+    padding-right: 50%;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+    // width: 100%;
+    width: 0%;  // necessary for the padding on either side of the scrollbar
+    direction: rtl;
+    justify-content: flex-start;
+    scroll-behavior: smooth;
+    border-top: 4px solid;
+    border-left: transparent;
+    border-image: linear-gradient(90deg, white 20%, black 50%, white 80%) 1;
+    height: 2vh;
+    padding-top: 2%;
+}
+
+.section.small.scroll .borderdiv {
+    margin-top: 20%;
+    height: 100%;
 }
 
 
@@ -76,7 +103,11 @@ $img-height: 700px;
 .elevator{
     grid-row: 1;
     grid-column: 1;
-    font-size: calc(3vw);
+    font-size: calc(2.7vw);
+
+    opacity: 0;
+    animation: fadeIn ease 1.5s forwards;
+    animation-delay: 0.5s;
 }
 
 .textplusframeworks{
@@ -196,17 +227,24 @@ a {
 
 .imgContainer {
     position: absolute;
-    top: 12%;
-    left: 15%;
+    top: 10%;
+    left: 20%;
 
     height: auto;
-    width: 110%;
+    width: 98%;
     border-radius: 40px;
     box-shadow: 5px 5px 5px rgb(0, 0, 0, 60%);
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    animation: fadeIn ease 1s;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
 }
 
 //for the project cards
@@ -277,6 +315,10 @@ a {
     align-items: center;
     flex-wrap: wrap;
     padding: 8vh 0 0 0;
+
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+    animation-delay: 1s;
 }
 
 .lfCard {
@@ -287,6 +329,11 @@ a {
 
     border-radius: 15%;
     transition: .3s ease-in-out;
+}
+
+.lfCard.small {
+    width: 80px;
+    height: auto;
 }
 
 .lfCard:hover{
@@ -331,4 +378,26 @@ h1{
     text-align: left;
     font-size: calc(14px + .84vw);
     margin-bottom: 50px;
+}
+
+.expcard {
+    width: $exp-height * 1/1.2;
+    height: $exp-height;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+
+    // background-image: linear-gradient(300deg, $purp 60%, $purp-dark);
+    // background-color: $purp;
+
+    padding: 5px;
+
+    border-style: solid outset;
+    border-width: 20px;
+    border-color: $purp;
+    border-radius: 30px;
+
+    position: relative;
 }

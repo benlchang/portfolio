@@ -1,6 +1,6 @@
 'use client'
 
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Image, {StaticImageData} from 'next/image';
 import '../styles/style.scss';
 import {ItemId, ScrollMenu} from 'react-horizontal-scrolling-menu';
@@ -84,18 +84,32 @@ function Card({itemId}: {itemId: number}) {
     )
 }
 
+
+
 export default function Timeline() {
+    useEffect(() => {
+        window.addEventListener('scroll', handleDateScroll);
+        return () => window.removeEventListener('scroll', handleDateScroll);
+    }, []);
 
     const [activeExperiences, setActiveExperiences] = useState([experiences[3], experiences[4]])
-    let allDates = document.querySelectorAll<HTMLElement>('[data-item]');
+
 
     const handleDateScroll = () => {
-        let visibleIds = Array.from(allDates)
-            .filter(item => {
-                let rect = item.getBoundingClientRect();
-                return rect.left >= .7 * width && rect.right <= 1.3 * width;
-            })
-            .map(item => item.id);
+        
+        let allDates: NodeListOf<HTMLElement> = document.querySelectorAll<HTMLElement>('[data-item]');
+        
+        let visibleIds: string[] = [];
+        if (allDates !== null){
+            visibleIds = Array.from(allDates)
+                .filter(item => {
+                    let rect = item.getBoundingClientRect();
+                    console.log(rect.left, rect.right);
+                    return rect.left >= .7 * width && rect.right <= 1.3 * width;
+                })
+                .map(item => item.id);
+        }
+        
 
         // console.log(visibleIds);
         

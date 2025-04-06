@@ -22,8 +22,10 @@ let now = new Date();
 let startMonth = 0;
 let startYear = 2021;
 
-let width = window.innerWidth / 2;
-console.log(width);
+let width = 800;
+if(typeof window !== "undefined") {
+    width = window.innerWidth / 2;
+}
 
 const experiences = [
     {job_title: 'Astronomy Research Intern', company: "GMU ASSIP", stack: [powershell], link: '/', imgPath: gmu, start: new Date(2021, 5-1), end: new Date(2021, 7-1)},
@@ -91,7 +93,7 @@ export default function Timeline() {
             })
             .map(item => item.id);
 
-        console.log(visibleIds);
+        // console.log(visibleIds);
         
         let currentExperiences = experiences.filter((event) => dateContains(event, visibleIds));
 

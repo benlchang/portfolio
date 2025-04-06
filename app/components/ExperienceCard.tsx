@@ -21,17 +21,17 @@ let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oc
 const ExperienceCard: React.FC<cardProps> = ( {job_title, company, stack, link, imgPath, start, end} ) => {
     return (
         <div className='expcard'>
-            <motion.div style={{width: '85%'}} whileHover={{scale: 1.1}}>
-                <Image src={imgPath} style={{margin: 0, width: '100%', height: '225px', borderRadius: 28}} alt={company}/>
+            <motion.div style={{position: 'absolute', top: '2%', display: 'flex', justifyContent: 'center', width: '85%'}} whileHover={{scale: 1.1}}>
+                <Image src={imgPath} style={{margin: 0, width: 'auto', height: '225px', borderRadius: 28}} alt={company}/>
             </motion.div>
-            <h3 className='proj-name'>{job_title}</h3>
-            <div>{company}</div>
-            <span>
+            <h3 className='proj-name' style={{position: 'absolute', top: '50%'}}>{job_title}</h3>
+            <div style={{position: 'absolute', top: '62%'}}>{company}</div>
+            <span style={{position: 'absolute', top: '67%'}}>
                 {stack.map(item => {
                     return <Image className='lfCard small' src={item} alt=''/>
                 })}
             </span>
-            <div style={{width: '90%', display: 'flex', justifyContent: 'space-between'}}>
+            <div style={{position: 'absolute', top: '92%', width: '90%', display: 'flex', justifyContent: 'space-between'}}>
                 <span>{months[start.getMonth()]} {start.getFullYear()} </span>
                 <span>{months[end.getMonth()]} {end.getFullYear()} </span>
 

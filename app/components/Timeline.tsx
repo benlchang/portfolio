@@ -12,11 +12,11 @@ import lspace from '../images/lspace.png';
 import gmu from '../images/gmu.webp';
 import uvacs from '../images/uvacs.png';
 import uvaastro from '../images/uvaastro.png';
-import powershell from '../images/image_3.jpg';
-import django from '../images/django.svg';
+import powershell from '../images/powershelll.webp';
+import django from '../images/django.png';
 import postgres from '../images/pgsql_noname.png';
 import jupyter from '../images/jupyter.png';
-import c from '../images/image_3.jpg';
+import c from '../images/c.png';
 
 let now = new Date();
 let startMonth = 0;

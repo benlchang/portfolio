@@ -390,12 +390,14 @@ h1{
     margin: 10px;
 
     // background-image: linear-gradient(300deg, $purp 60%, $purp-dark);
-    background-color: $purp;
+    // background-color: $purp;
 
     padding: 5px;
 
-    // border-style: solid outset;
-    // // border-width: 20px;
-    // border-color: $purp;
+    border-style: solid outset;
+    border-width: 20px;
+    border-color: $purp;
     border-radius: 30px;
+
+    position: relative;
 }

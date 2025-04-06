@@ -62,27 +62,27 @@ const dateContains = (event: {start: Date, end: Date}, nums: string[]) => {
 
 let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-function Card({itemId}: {itemId: number}) {
+// function Card({itemId}: {itemId: number}) {
 
-    let date = new Date(startYear + itemId / 12, startMonth + itemId % 12);
+//     let date = new Date(startYear + itemId / 12, startMonth + itemId % 12);
 
-    let ctr = width;
+//     let ctr = width;
 
-    if (typeof document !== 'undefined') {
-        let container = document.getElementById(`${itemId}`);
-        let rect = container?.getBoundingClientRect();
+//     if (typeof document !== 'undefined') {
+//         let container = document.getElementById(`${itemId}`);
+//         let rect = container?.getBoundingClientRect();
 
-        if(rect != null){
-            ctr = (rect.left + rect.right) / 2;
-        }
-    }
+//         if(rect != null){
+//             ctr = (rect.left + rect.right) / 2;
+//         }
+//     }
 
-    return (
-        <div style={{width: '160px'}}>
-            <span style={{display: 'flex', justifyContent: 'center', textAlign: 'center', fontSize: `calc(28px * (1 - (${1.4/width * Math.abs(ctr - width)}))`}}>{months[date.getMonth()]} {date.getFullYear()}</span>
-        </div>
-    )
-}
+//     return (
+//         <div style={{width: '160px'}}>
+//             <span style={{display: 'flex', justifyContent: 'center', textAlign: 'center', fontSize: `calc(28px * (1 - (${1.4/width * Math.abs(ctr - width)}))`}}>{months[date.getMonth()]} {date.getFullYear()}</span>
+//         </div>
+//     )
+// }
 
 
 
@@ -121,6 +121,28 @@ export default function Timeline() {
         }
         setActiveExperiences(currentExperiences);
     }
+
+    function Card({itemId}: {itemId: number}) {
+
+        let date = new Date(startYear + itemId / 12, startMonth + itemId % 12);
+    
+        let ctr = width;
+    
+        if (typeof document !== 'undefined') {
+            let container = document.getElementById(`${itemId}`);
+            let rect = container?.getBoundingClientRect();
+    
+            if(rect != null){
+                ctr = (rect.left + rect.right) / 2;
+            }
+        }
+    
+        return (
+            <div style={{width: '160px'}}>
+                <span style={{display: 'flex', justifyContent: 'center', textAlign: 'center', fontSize: `calc(28px * (1 - (${1.4/width * Math.abs(ctr - width)}))`}}>{months[date.getMonth()]} {date.getFullYear()}</span>
+            </div>
+        )
+    }
     
     return (
         <div>
@@ -140,6 +162,7 @@ export default function Timeline() {
             <div className='section small scroll'> 
                 <div className='borderdiv'>
                     <ScrollMenu 
+                        onInit={() => handleDateScroll()}
                         onUpdate={() => handleDateScroll()}
                     >
                         {times.map((num) => (

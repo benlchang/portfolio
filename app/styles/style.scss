@@ -220,7 +220,7 @@ a {
     height: calc(50px + 40vw);
     width: 25vw;
     background-image: linear-gradient(150deg, $purp 40%, $purp-dark);
-    border-radius: 50px;
+    border-radius: calc(200px - 5.5vw);
     
     text-justify: center;
 }

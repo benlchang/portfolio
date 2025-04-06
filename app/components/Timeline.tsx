@@ -17,21 +17,17 @@ import django from '../images/django.png';
 import postgres from '../images/pgsql_noname.png';
 import jupyter from '../images/jupyter.png';
 import c from '../images/c.png';
+import pyklip from '../images/pyklip.jpg';
 
 let now = new Date();
 let startMonth = 0;
 let startYear = 2021;
 
-let width = 800;
-if(typeof window !== "undefined") {
-    width = window.innerWidth / 2;
-}
-
 const experiences = [
     {job_title: 'Astronomy Research Intern', company: "GMU ASSIP", stack: [powershell], link: '/', imgPath: gmu, start: new Date(2021, 5-1), end: new Date(2021, 7-1)},
     {job_title: 'Project Development Fellow', company: "NASA L'SPACE", stack: [], link: '/', imgPath: lspace, start: new Date(2022, 9-1), end: new Date(2023, 5-1)},
     {job_title: 'Software Developer Intern', company: "Exchange IT", stack: [django, postgres], link: '/', imgPath: exchange, start: new Date(2024, 8-1), end: new Date(2024, 10-1)},
-    {job_title: 'Undergraduate Researcher', company: "UVA Astronomy", stack: [jupyter, powershell], link: '/', imgPath: uvaastro, start: new Date(2023, 12-1), end: now},
+    {job_title: 'Undergraduate Researcher', company: "UVA Astronomy", stack: [jupyter, powershell, pyklip], link: '/', imgPath: uvaastro, start: new Date(2023, 12-1), end: now},
     {job_title: 'Teaching Assistant', company: "UVA Computer Systems & Organization II", stack: [c], link: '/', imgPath: uvacs, start: new Date(2025, 1-1), end: now},
     // {
     //     name: 'Exchange IT Solutions',
@@ -87,6 +83,12 @@ let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oc
 
 
 export default function Timeline() {
+    
+    let width = 800;
+    if(typeof window !== "undefined") {
+        width = window.innerWidth / 2;
+    }
+    
     useEffect(() => {
         window.addEventListener('scroll', handleDateScroll);
         return () => window.removeEventListener('scroll', handleDateScroll);

@@ -65,12 +65,16 @@ let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oc
 function Card({itemId}: {itemId: number}) {
 
     let date = new Date(startYear + itemId / 12, startMonth + itemId % 12);
-    let container = document.getElementById(`${itemId}`);
-    let rect = container?.getBoundingClientRect();
 
     let ctr = width;
-    if(rect != null){
-        ctr = (rect.left + rect.right) / 2;
+
+    if (typeof document !== 'undefined') {
+        let container = document.getElementById(`${itemId}`);
+        let rect = container?.getBoundingClientRect();
+
+        if(rect != null){
+            ctr = (rect.left + rect.right) / 2;
+        }
     }
 
     return (

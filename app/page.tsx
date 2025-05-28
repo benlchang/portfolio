@@ -21,7 +21,6 @@ import cs3240 from './images/cs3240.png';
 export default function Home() {
     return (
         <>
-            <div className="section small" style={{height: '12vh', marginBottom: '30px'}}/>
             <div className='section large'>
                 <div className='sideThing'>
                     <Image src={headshot}
@@ -30,7 +29,7 @@ export default function Home() {
                 </div>
                 <div className='textplusframeworks'>
                     <div className='elevator'>
-                        <span style={{color: '#9985ff', fontWeight: 'bold', fontSize: 'calc(3.0vw)'}}>Ben</span> is a student and undergraduate researcher at the University of Virginia. He's
+                        <span style={{color: '#9985ff', fontWeight: 'bold', fontSize: 'calc(18px + 2vw)'}}>Ben</span> is a student and undergraduate researcher at the University of Virginia. He's
                         interested in software engineering, machine learning, image analysis, and astronomy.
                     </div>
                     <div style={{animation: 'fadeIn 1.5s ease forwards', animationDelay: '1s', opacity: '0', paddingTop: '5.25%', maxWidth: '70%', display: 'flex', justifyContent: 'space-around', alignItems: 'center'}}>

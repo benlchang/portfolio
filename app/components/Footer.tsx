@@ -12,7 +12,7 @@ export default function Footer() {
             padding: '30px 0',
             color: '$primary'
         }}>
-            © Copyright Benjamin Chang 2024
+            © Benjamin Chang 2025
         </div>
     )
 }

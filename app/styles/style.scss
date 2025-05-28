@@ -27,6 +27,7 @@ $exp-height: 450px;
 .section.large {
     min-height: 100vh;
     padding-bottom: 10vh;
+    margin-bottom: 10vw;
 }
 
 .section.small.display {
@@ -72,54 +73,6 @@ $exp-height: 450px;
     animation: logoRise 1.5s ease-out;
 }
 
-@media (max-width: 800px){
-    .section .name-logo{
-        font-size: 170px;
-        $name-size: 170px;
-    }
-    .elevator{
-        font-size: 40px;
-    }
-}
-
-@media (max-width: 600px){
-    .section .name-logo{
-        font-size: 80px;
-        $name-size: 80px;
-    }
-    .card {
-        width: 280px;
-    }
-}
-
-@media (max-width: 370px){
-    .section .name-logo{
-        font-size: 50px;
-        $name-size: 50px;
-    }
-
-}
-
-.elevator{
-    grid-row: 1;
-    grid-column: 1;
-    font-size: calc(2.7vw);
-
-    opacity: 0;
-    animation: fadeIn ease 1.5s forwards;
-    animation-delay: 0.5s;
-}
-
-.textplusframeworks{
-    position: absolute;
-    top: -10%;
-    left: 45%;
-    display: grid;
-    grid-template-columns: 1;
-    grid-template-rows: 2;
-    padding: 40px 7% 40px 0px;
-}
-
 .header {
     z-index: 4;
     display: flex;
@@ -161,6 +114,34 @@ $exp-height: 450px;
 a {
     text-decoration: none;
     color: $primary;
+}
+
+@media (max-width: 800px){
+    .section .name-logo{
+        font-size: 170px;
+        $name-size: 170px;
+    }
+    .elevator{
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 600px){
+    .section .name-logo{
+        font-size: 80px;
+        $name-size: 80px;
+    }
+    .card {
+        width: 280px;
+    }
+}
+
+@media (max-width: 370px){
+    .section .name-logo{
+        font-size: 50px;
+        $name-size: 50px;
+    }
+
 }
 
 //for the About page
@@ -214,13 +195,13 @@ a {
 //for the mini about section on the home page
 .sideThing {
     position: absolute;
-    top: -15%;
+    top: 15%;
     left: 10%;
 
     height: calc(50px + 40vw);
     width: 25vw;
     background-image: linear-gradient(150deg, $purp 40%, $purp-dark);
-    border-radius: calc(200px - 5.5vw);
+    border-radius: 3.5vw;
     
     text-justify: center;
 }
@@ -232,7 +213,7 @@ a {
 
     height: auto;
     width: 98%;
-    border-radius: 40px;
+    border-radius: 3.5vw;
     box-shadow: 5px 5px 5px rgb(0, 0, 0, 60%);
 
     display: flex;
@@ -240,6 +221,26 @@ a {
     align-items: center;
 
     animation: fadeIn ease 1s;
+}
+
+.elevator{
+    grid-row: 1;
+    grid-column: 1;
+    font-size: calc(12px + 2vw);
+
+    opacity: 0;
+    animation: fadeIn ease 1.5s forwards;
+    animation-delay: 0.5s;
+}
+
+.textplusframeworks{
+    position: absolute;
+    top: 11%;
+    left: 45%;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 2;
+    padding: 40px 7% 40px 0px;
 }
 
 @keyframes fadeIn {
@@ -322,7 +323,7 @@ a {
 }
 
 .lfCard {
-    width: calc(40px + 3vw);
+    width: calc(20px + 4vw);
     height: auto;
 
     margin: 2vh 15px;
@@ -332,7 +333,7 @@ a {
 }
 
 .lfCard.small {
-    width: 80px;
+    width: calc(65px + 1.2vw);
     height: auto;
 }
 

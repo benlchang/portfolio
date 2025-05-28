@@ -18,6 +18,7 @@ import postgres from '../images/pgsql_noname.png';
 import jupyter from '../images/jupyter.png';
 import c from '../images/c.png';
 import pyklip from '../images/pyklip.jpg';
+import { maxHeaderSize } from 'http';
 
 let now = new Date();
 let startMonth = 0;
@@ -40,7 +41,7 @@ const experiences = [
     // }
 ]
 
-const times = Array.from({ length: 52 }, (_, i) => 51 - i);
+const times = Array.from({ length: 53 }, (_, i) => 52 - i);
 
 const dateContains = (event: {start: Date, end: Date}, nums: string[]) => {
 
@@ -98,7 +99,6 @@ export default function Timeline() {
 
 
     const handleDateScroll = () => {
-        
         let allDates: NodeListOf<HTMLElement> = document.querySelectorAll<HTMLElement>('[data-item]');
         
         let visibleIds: string[] = [];
@@ -106,7 +106,7 @@ export default function Timeline() {
             visibleIds = Array.from(allDates)
                 .filter(item => {
                     let rect = item.getBoundingClientRect();
-                    console.log(rect.left, rect.right);
+                    // console.log(rect.left, rect.right);
                     return rect.left >= .7 * width && rect.right <= 1.3 * width;
                 })
                 .map(item => item.id);

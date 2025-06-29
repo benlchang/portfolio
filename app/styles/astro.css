@@ -24,8 +24,8 @@
 
 .spaceSection {
   z-index: 4;
-  width: 100vw;
-  height: 120vh;
+  width: 95vw;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,6 +36,9 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  border-width: 2px;
+  border-radius: 50px;
 }
 
 .mini-planet-container {
@@ -45,8 +48,8 @@
 }
 
 .sun {
-  height: min(20vw, 20vh);
-  width: min(20vw, 20vh);
+  height: min(15vw, 15vh);
+  width: min(15vw, 15vh);
   position: relative;
   border-radius: 50%;
   background-image: url("../images/logo.png");

@@ -214,17 +214,54 @@ a {
 }
 
 .projcard {
-  width: 400px;
-  height: 400px;
+  width: 45vw;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 50px;
+}
+
+.proj-wrapper {
+  width: 45vw;
+  height: 50vh;
+  background-size: cover;
   border-style: solid;
   border-width: 2px;
   border-color: white;
   border-radius: 30px;
+
+  position: relative;
+  z-index: 1;
+}
+
+.proj-wrapper.hiphop {
+  background-image: url('../images/hiphopml.png');
+}
+
+.proj-wrapper.cla {
+  background-image: url('../images/cs3240.png');
+}
+
+.proj-wrapper.bookie {
+  background-image: url('../images/bookie.png');
+}
+
+.proj-wrapper.site {
+  background-image: url('../images/logo.png');
+}
+
+.proj-wrapper.grocery {
+  background-image: url('../images/forager.png');
+}
+
+.proj-fade-wrapper {
+  position: absolute;
+  z-index: 2;
+  top: 60%;
+  height: 40%;
+  /* background-color: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba (255, 255, 255, 1)); */
+  background-color: white;
 }
 
 .proj-entry {

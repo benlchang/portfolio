@@ -1,3 +1,5 @@
+"use client"
+
 import './styles/astro.css';
 import './styles/style.css';
 import './styles/colors-and-fonts.css';
@@ -15,6 +17,7 @@ import Link from 'next/link';
 import hiphopml from './images/hiphopml.png';
 import bookie from './images/bookie.png';
 import cs3240 from './images/cs3240.png';
+import Crossword from '@jaredreisinger/react-crossword';
 
 
 
@@ -82,40 +85,45 @@ export default function Home() {
             </div>
             <div className='projects'>
                 <ProjectCard
+                    id='hiphop'
                     name='Hip Hop Dance Move Identifier'
-                    imgPath={hiphopml}
+                    imgPath='hiphopml.png'
                     desc='WORK IN PROGRESS: Trained model that detects and classifies Hip Hop dance moves from video'
                     stack='OpenCV, MediaPipe, Tensorflow / Keras'
                     link='/'
                     github='https://github.com/benlchang/hiphopml'
                 />
                 <ProjectCard
+                    id='cla'
                     name='Cataloguing/Lending App'
-                    imgPath={cs3240}
+                    imgPath='c3240.png'
                     desc='Class project allows users to borrow and organize vinyl albums'
                     stack='Django, Amazon S3, GitHub CI, Heroku'
                     link='/'
                     github='/'
                 />
                 <ProjectCard
+                    id='grocery'
                     name='Grocery List Optimizer'
-                    imgPath={grocery}
+                    imgPath='grocery.png'
                     desc='Full-stack search engine for Charlottesville grocery shoppers that optimizes your grocery list'
                     stack='React, Express, PostgreSQL, Tensorflow'
                     link='./grocery'
                     github='https://github.com/benlchang/grocery_cville'
                 />
                 <ProjectCard
+                    id='bookie'
                     name='Book Recommendation AI'
-                    imgPath={bookie}
+                    imgPath='bookie.png'
                     desc='Agentic AI workflow curates book recommendations and summaries based on your favorites'
                     stack='LangGraph, OpenAI, Tavily'
                     link='/'
                     github='https://github.com/benlchang/bookie'
                 />
                 <ProjectCard
+                    id='site'
                     name='Personal Website'
-                    imgPath={logo}
+                    imgPath='logo.png'
                     desc='Custom-designed portfolio to showcase my programming projects / experience. From scratch!'
                     stack='React (Typescript), Next.js, SASS'
                     link='./portfolio'

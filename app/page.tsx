@@ -17,7 +17,6 @@ import Link from 'next/link';
 import hiphopml from './images/hiphopml.png';
 import bookie from './images/bookie.png';
 import cs3240 from './images/cs3240.png';
-import Crossword from '@jaredreisinger/react-crossword';
 
 
 

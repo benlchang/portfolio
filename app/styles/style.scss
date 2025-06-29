@@ -258,7 +258,7 @@ a {
 
 .projcard {
     width: 45vw;
-    height: 50vh;
+    height: 78vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -273,7 +273,7 @@ a {
 
 .proj-wrapper {
     width: 45vw;
-    height: 50vh;
+    height: 78vh;
     background-size: cover;
 }
 
@@ -301,7 +301,7 @@ a {
 } 
 
 .proj-desc{
-    margin-bottom: 16px;
+    margin-top: 16px;
 }
 
 .expImage {
@@ -337,7 +337,7 @@ a {
 }
 
 .lfCard.small {
-    width: calc(65px + 1.2vw);
+    width: calc(45px + 1.1vw);
     height: auto;
 }
 

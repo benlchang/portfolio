@@ -12,6 +12,6 @@ function Tile() {
 export default function Crossword() {
     
     return (
-        <Crossword></Crossword>
+        <></>
     )
 }

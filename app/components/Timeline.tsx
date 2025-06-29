@@ -18,6 +18,12 @@ import postgres from '../images/pgsql_noname.png';
 import jupyter from '../images/jupyter.png';
 import c from '../images/c.png';
 import pyklip from '../images/pyklip.jpg';
+import aws from '../images/aws.png';
+import github from '../images/github.svg';
+import react from '../images/react.png';
+import spring from '../images/spring.png';
+import jira from '../images/jira.webp';
+import bti from '../images/bti360.jpg';
 import { maxHeaderSize } from 'http';
 
 let now = new Date();
@@ -28,8 +34,9 @@ const experiences = [
     {job_title: 'Astronomy Research Intern', company: "GMU ASSIP", stack: [powershell], link: '/', imgPath: gmu, start: new Date(2021, 5-1), end: new Date(2021, 7-1)},
     {job_title: 'Project Development Fellow', company: "NASA L'SPACE", stack: [], link: '/', imgPath: lspace, start: new Date(2022, 9-1), end: new Date(2023, 5-1)},
     {job_title: 'Software Developer Intern', company: "Exchange IT", stack: [django, postgres], link: '/', imgPath: exchange, start: new Date(2024, 8-1), end: new Date(2024, 10-1)},
-    {job_title: 'Undergraduate Researcher', company: "UVA Astronomy", stack: [jupyter, powershell, pyklip], link: '/', imgPath: uvaastro, start: new Date(2023, 12-1), end: now},
+    {job_title: 'Undergraduate Researcher', company: "UVA Astronomy", stack: [jupyter, powershell, pyklip, github], link: '/', imgPath: uvaastro, start: new Date(2023, 12-1), end: now},
     {job_title: 'Teaching Assistant', company: "UVA Computer Systems & Organization II", stack: [c], link: '/', imgPath: uvacs, start: new Date(2025, 1-1), end: now},
+    {job_title: 'Software Engineer Intern', company: "BTI360", stack: [react, spring, aws, jira], link: '/', imgPath: bti, start: new Date(2025, 5-1), end: now}
     // {
     //     name: 'Exchange IT Solutions',
     //     position: 'Backend Software Developer Intern',
@@ -41,7 +48,7 @@ const experiences = [
     // }
 ]
 
-const times = Array.from({ length: 53 }, (_, i) => 52 - i);
+const times = Array.from({ length: 54 }, (_, i) => 53 - i);
 
 const dateContains = (event: {start: Date, end: Date}, nums: string[]) => {
 

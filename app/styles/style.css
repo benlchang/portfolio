@@ -215,7 +215,7 @@ a {
 
 .projcard {
   width: 45vw;
-  height: 50vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -224,7 +224,7 @@ a {
 
 .proj-wrapper {
   width: 45vw;
-  height: 50vh;
+  height: 70vh;
   background-size: cover;
   border-style: solid;
   border-width: 2px;
@@ -287,7 +287,7 @@ a {
 }
 
 .proj-desc {
-  margin-bottom: 16px;
+  margin-top: 16px;
 }
 
 .expImage {
@@ -310,7 +310,6 @@ a {
 .lfCard {
   width: calc(40px + 3vw);
   height: auto;
-  margin: 2vh 15px;
   border-radius: 15%;
   transition: 0.3s ease-in-out;
 }

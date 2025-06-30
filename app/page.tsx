@@ -34,6 +34,7 @@ import deeplearningai from './images/deeplearningai.png';
 import heroku from './images/heroku.png';
 import aws from './images/aws.png';
 import github from './images/github.svg';
+import jupyter from './images/jupyter.png';
 import {lfProps, lfPropsList} from './components/LFCard'
 
 let awsLF: lfProps = {name: 'AWS', imgPath: aws}
@@ -42,6 +43,7 @@ let dlaiLF: lfProps = {name: 'DeepLearningAI', imgPath: deeplearningai}
 let gitLF: lfProps = {name: 'Git', imgPath: git}
 let githubLF: lfProps = {name: 'Github', imgPath: github}
 let herokuLF: lfProps = {name: 'Heroku', imgPath: heroku}
+let jupyterLF: lfProps = {name: 'Jupyter', imgPath: jupyter}
 let nextLF: lfProps = {name: 'Next', imgPath: next}
 let nodeLF: lfProps = {name: 'Node.js', imgPath: node}
 let opencvLF: lfProps = {name: 'OpenCV', imgPath: opencv}
@@ -109,7 +111,7 @@ export default function Home() {
                     name='Hip Hop Dance Move Identifier'
                     imgPath='hiphopml.png'
                     desc='WORK IN PROGRESS: Trained model that detects and classifies Hip Hop dance moves from video'
-                    stack={[tfLF, opencvLF]}
+                    stack={[tfLF, opencvLF, jupyterLF]}
                     link='/'
                     github='https://github.com/benlchang/hiphopml'
                 />

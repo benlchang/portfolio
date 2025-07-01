@@ -246,7 +246,7 @@ a {
 }
 
 .proj-entry{
-    width: max(500px, 42vw);    //replace with proper padding
+    width: max(482px, 42vw);    //dont know why it needs to be 482 but this works
     padding: 0 1.5vw;
 }
 

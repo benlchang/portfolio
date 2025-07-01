@@ -25,15 +25,11 @@ $exp-height: 450px;
 }
 
 .section.large {
-    min-height: 100vh;
     padding-bottom: 10vh;
     margin-bottom: 10vw;
 }
 
 .section.small.display {
-    margin: 0;
-    padding: 0;
-    
     height: $exp-height + 100px;
 }
 
@@ -114,34 +110,6 @@ $exp-height: 450px;
 a {
     text-decoration: none;
     color: $primary;
-}
-
-@media (max-width: 800px){
-    .section .name-logo{
-        font-size: 170px;
-        $name-size: 170px;
-    }
-    .elevator{
-        font-size: 40px;
-    }
-}
-
-@media (max-width: 600px){
-    .section .name-logo{
-        font-size: 80px;
-        $name-size: 80px;
-    }
-    .card {
-        width: 280px;
-    }
-}
-
-@media (max-width: 370px){
-    .section .name-logo{
-        font-size: 50px;
-        $name-size: 50px;
-    }
-
 }
 
 //for the About page
@@ -257,7 +225,7 @@ a {
 }
 
 .projcard {
-    width: 45vw;
+    width: max(500px, 45vw);
     height: 78vh;
     display: flex;
     flex-direction: column;
@@ -272,27 +240,21 @@ a {
 }
 
 .proj-wrapper {
-    width: 45vw;
+    width: 100%;
     height: 78vh;
     background-size: cover;
 }
 
 .proj-entry{
-    width: 42vw;    //replace with proper padding
+    width: max(500px, 42vw);    //replace with proper padding
     padding: 0 1.5vw;
 }
 
 .proj-name{
-    font-size: calc(28px);
+    font-size: calc(16px + 1vw);
     text-align: left;
     margin-top: 16px;
     margin-bottom: 2px;
-}
-
-.proj-stack{
-    font-size: calc(16px);
-    font-style: italic;
-    margin-bottom: 16px;
 }
 
 .proj-link {

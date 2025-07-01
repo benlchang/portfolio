@@ -98,6 +98,7 @@ export default function Home() {
                     />
                 </div>
             </div>
+            <ContactSystem/>
             <div className='section small' style={{height: '0vh', paddingTop: '0', paddingBottom: '0', fontWeight: '700', fontSize: 'calc(30px + 3vw)'}}>
                 Experience
             </div>
@@ -152,10 +153,9 @@ export default function Home() {
                     github='https://github.com/benlchang/portfolio'
                 />
             </div>
-            <div className='section small' style={{fontWeight: 700, padding: 0, fontSize: 'calc(8px + 3vw)'}}>
+            {/* <div className='section small' style={{fontWeight: 700, padding: 0, fontSize: 'calc(8px + 3vw)'}}>
                 ↓ Click a planet to learn more about me! ↓
-            </div>
-            <ContactSystem/>
+            </div> */}
         </>
     )
 }

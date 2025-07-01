@@ -48,7 +48,7 @@ const experiences = [
     // }
 ]
 
-const times = Array.from({ length: 54 }, (_, i) => 53 - i);
+const times = Array.from({ length: 55 }, (_, i) => 54 - i);
 
 const dateContains = (event: {start: Date, end: Date}, nums: string[]) => {
 
@@ -102,7 +102,7 @@ export default function Timeline() {
         return () => window.removeEventListener('scroll', handleDateScroll);
     }, []);
 
-    const [activeExperiences, setActiveExperiences] = useState([experiences[3], experiences[4]])
+    const [activeExperiences, setActiveExperiences] = useState([experiences[3], experiences[4], experiences[5]])
 
 
     const handleDateScroll = () => {

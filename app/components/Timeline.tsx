@@ -37,15 +37,6 @@ const experiences = [
     {job_title: 'Undergraduate Researcher', company: "UVA Astronomy", stack: [jupyter, powershell, pyklip, github], link: '/', imgPath: uvaastro, start: new Date(2023, 12-1), end: now},
     {job_title: 'Teaching Assistant', company: "UVA Computer Systems & Organization II", stack: [c], link: '/', imgPath: uvacs, start: new Date(2025, 1-1), end: now},
     {job_title: 'Software Engineer Intern', company: "BTI360", stack: [react, spring, aws, jira], link: '/', imgPath: bti, start: new Date(2025, 5-1), end: now}
-    // {
-    //     name: 'Exchange IT Solutions',
-    //     position: 'Backend Software Developer Intern',
-    //     imgPath: {exchange},
-    //     desc: 
-    // },
-    // {
-
-    // }
 ]
 
 const times = Array.from({ length: 55 }, (_, i) => 54 - i);
@@ -65,30 +56,6 @@ const dateContains = (event: {start: Date, end: Date}, nums: string[]) => {
 }
 
 let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
-// function Card({itemId}: {itemId: number}) {
-
-//     let date = new Date(startYear + itemId / 12, startMonth + itemId % 12);
-
-//     let ctr = width;
-
-//     if (typeof document !== 'undefined') {
-//         let container = document.getElementById(`${itemId}`);
-//         let rect = container?.getBoundingClientRect();
-
-//         if(rect != null){
-//             ctr = (rect.left + rect.right) / 2;
-//         }
-//     }
-
-//     return (
-//         <div style={{width: '160px'}}>
-//             <span style={{display: 'flex', justifyContent: 'center', textAlign: 'center', fontSize: `calc(28px * (1 - (${1.4/width * Math.abs(ctr - width)}))`}}>{months[date.getMonth()]} {date.getFullYear()}</span>
-//         </div>
-//     )
-// }
-
-
 
 export default function Timeline() {
     
@@ -126,7 +93,7 @@ export default function Timeline() {
 
         // for some reason, on page load, it scrolls twice and no items are loaded, so the field is empty on the page
         if(visibleIds.length == 0){
-            currentExperiences = [experiences[3], experiences[4]];
+            currentExperiences = [experiences[3], experiences[4], experiences[5]];
         }
         setActiveExperiences(currentExperiences);
     }

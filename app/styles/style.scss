@@ -251,7 +251,7 @@ a {
 }
 
 .proj-name{
-    font-size: calc(16px + 1vw);
+    font-size: calc(22px + .4vw);
     text-align: left;
     margin-top: 16px;
     margin-bottom: 2px;
@@ -299,7 +299,7 @@ a {
 }
 
 .lfCard.small {
-    width: calc(45px + 1.1vw);
+    width: calc(50px + .1vw);
     height: auto;
 
     margin: 2vh 1vw;

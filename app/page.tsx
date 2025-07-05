@@ -118,7 +118,7 @@ export default function Home() {
                 />
                 <ProjectCard
                     id='cla'
-                    name='Cataloguing/Lending App'
+                    name='Vinyl Album Cataloguing/Lending App'
                     imgPath='c3240.png'
                     desc='Class project allows users to borrow and organize vinyl albums'
                     stack={[djangoLF, pgsqlLF, awsLF, githubLF, herokuLF]}

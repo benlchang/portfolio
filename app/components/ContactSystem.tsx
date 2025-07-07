@@ -20,7 +20,7 @@ export default function ContactSystem() {
                     name= 'venus'
                     route='https://www.linkedin.com/in/ben-chang-240b8024b/'
                     img='./images/linkedin.webp'
-                    axis={1.4}
+                    axis={1.3}
                     size='calc(32px + 2vw)'
                     orbit={3.0}
                     offSet={96}/>
@@ -28,7 +28,7 @@ export default function ContactSystem() {
                     name='earth'
                     route='https://www.facebook.com/benjamin.chang.9083477'
                     img='./images/facebook.jpg'
-                    axis={1.9}
+                    axis={1.8}
                     size='calc(32px + 2vw)'
                     orbit={4.5}
                     offSet={5}/>

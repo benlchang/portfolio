@@ -36,10 +36,6 @@ const ExperienceCard: React.FC<cardProps> = ( {job_title, company, stack, link, 
                 <span>{months[end.getMonth()]} {end.getFullYear()} </span>
 
             </div>
-            {/* <div style={{display: 'flex', justifyContent: 'space-between'}}>
-                <span>{link !== '/' && <Link className='proj-link' href={link}>About the Project →</Link>}</span> 
-                <span>{github !== '/' && <Link className='proj-link' target='_blank' href={github}>GitHub →</Link>}</span>
-            </div> */}
         </div>
     )
 }

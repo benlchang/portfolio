@@ -86,8 +86,8 @@ export default function Home() {
                 </div>
                 <div className='textplusframeworks'>
                     <div className='elevator'>
-                        <span style={{color: '#9985ff', fontWeight: 'bold', fontSize: 'calc(18px + 2vw)'}}>Ben</span> is a student and undergraduate researcher at the University of Virginia. He's
-                        interested in software engineering, machine learning, image analysis, and astronomy.
+                        <span style={{color: '#9985ff', fontWeight: 'bold', fontSize: 'calc(18px + 2vw)'}}>Ben</span> is a software engineer and student at the University of Virginia. He's
+                        interested in machine learning, cloud computing, agentic AI, and astronomy.
                     </div>
                     <div style={{animation: 'fadeIn 1.5s ease forwards', animationDelay: '1s', opacity: '0', paddingTop: '5.25%', maxWidth: '70%', display: 'flex', justifyContent: 'space-around', alignItems: 'center'}}>
                         <Image className='lfCard' src={gmail} alt='gmail logo'/>

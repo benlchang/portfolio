@@ -226,7 +226,7 @@ a {
 
 .projcard {
     width: max(320px, 45vw);
-    height: 60vh;
+    height: 62vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -234,8 +234,10 @@ a {
 
     border-style: solid;
     border-width: 2px;
-    border-color: white;
+    border-color: #dddddd;
     border-radius: 30px;
+
+    margin-bottom: 50px;
     //box-shadow: 5px 5px 5px rgb(0, 0, 0, 60%);
 }
 

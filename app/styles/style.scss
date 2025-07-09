@@ -247,6 +247,12 @@ a {
     }
 }
 
+@media (min-width: 601px) and (max-width: 1600px) {
+    .projcard {
+        height: 80vh;
+    }
+}
+
 .proj-wrapper {
     width: 100%;
     background-size: cover;

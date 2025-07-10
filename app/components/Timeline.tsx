@@ -80,14 +80,11 @@ export default function Timeline() {
             visibleIds = Array.from(allDates)
                 .filter(item => {
                     let rect = item.getBoundingClientRect();
-                    // console.log(rect.left, rect.right);
                     return rect.left >= .7 * width && rect.right <= 1.3 * width;
                 })
                 .map(item => item.id);
         }
         
-
-        // console.log(visibleIds);
         
         let currentExperiences = experiences.filter((event) => dateContains(event, visibleIds));
 
